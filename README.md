@@ -1,2 +1,2 @@
-# dispensary-tinctures
-Add a Tinctures menu type to your WP Dispensary powered menu
+# WP Dispensary's Tinctures add-on
+Release notes and other information will be added here when the plugin is ready for release.
