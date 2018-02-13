@@ -9,11 +9,11 @@
  * @package    WPD_Tinctures
  * @subpackage WPD_Tinctures/admin
  */
+
 /**
- * Prices metabox for the following menu types:
- * Pre-rolls, Edibles, Growers
+ * Prices metabox for the Tinctures menu type
  *
- * Adds a price metabox to all of the above custom post types
+ * Adds a price metabox
  *
  * @since    1.0.0
  */
