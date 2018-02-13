@@ -112,3 +112,121 @@ function wpd_tinctures_prices_save_meta( $post_id, $post ) {
 }
 
 add_action( 'save_post', 'wpd_tinctures_prices_save_meta', 1, 2 ); /** Save the custom fields */
+
+
+/**
+ * Details metabox for the Tinctures menu type
+ *
+ * Adds a details metabox
+ *
+ * @since    1.0.0
+ */
+function wpd_tinctures_details_metaboxes() {
+
+	$screens = array( 'tinctures' );
+
+	foreach ( $screens as $screen ) {
+		add_meta_box(
+			'wpd_tinctures_details',
+			__( 'Tincture Details', 'wpd-tinctures' ),
+			'wpd_tinctures_details',
+			$screen,
+			'normal',
+			'default'
+		);
+	}
+
+}
+
+add_action( 'add_meta_boxes', 'wpd_tinctures_details_metaboxes' );
+
+/**
+ * Single Prices
+ */
+function wpd_tinctures_details() {
+	global $post;
+
+	/** Noncename needed to verify where the data originated */
+	echo '<input type="hidden" name="tincturesdetailsmeta_noncename" id="tincturesdetailsmeta_noncename" value="' .
+	wp_create_nonce( plugin_basename( __FILE__ ) ) . '" />';
+
+	/** Get the details data if its already been entered */
+	$thcmg          = get_post_meta( $post->ID, '_thcmg', true );
+	$cbdmg          = get_post_meta( $post->ID, '_cbdmg', true );
+	$mlserving      = get_post_meta( $post->ID, '_mlserving', true );
+	$thccbdservings = get_post_meta( $post->ID, '_thccbdservings', true );
+	$netweight      = get_post_meta( $post->ID, '_netweight', true );
+
+	/** Echo out the fields */
+	echo '<div class="tincturesdetailsbox">';
+	echo '<p>THC mg per serving:</p>';
+	echo '<input type="text" name="_thcmg" value="' . esc_html( $thcmg ) . '" class="widefat" />';
+	echo '</div>';
+	echo '<div class="tincturesdetailsbox">';
+	echo '<p>CBD mg per serving:</p>';
+	echo '<input type="text" name="_cbdmg" value="' . esc_html( $cbdmg ) . '" class="widefat" />';
+	echo '</div>';
+	echo '<div class="tincturesdetailsbox">';
+	echo '<p>ml per serving:</p>';
+	echo '<input type="text" name="_mlserving" value="' . esc_html( $mlserving ) . '" class="widefat" />';
+	echo '</div>';
+	echo '<div class="tincturesdetailsbox">';
+	echo '<p>Servings:</p>';
+	echo '<input type="text" name="_thccbdservings" value="' . esc_html( $thccbdservings ) . '" class="widefat" />';
+	echo '</div>';
+	echo '<div class="tincturesdetailsbox">';
+	echo '<p>Net weght (ounces):</p>';
+	echo '<input type="text" name="_netweight" value="' . esc_html( $netweight ) . '" class="widefat" />';
+	echo '</div>';
+
+}
+
+/**
+ * Save the Metabox Data
+ */
+function wpd_tinctures_details_save_meta( $post_id, $post ) {
+
+	/**
+	 * Verify this came from the our screen and with proper authorization,
+	 * because save_post can be triggered at other times
+	 */
+	if ( ! wp_verify_nonce( $_POST['tincturesdetailsmeta_noncename'], plugin_basename( __FILE__ ) ) ) {
+		return $post->ID;
+	}
+
+	/** Is the user allowed to edit the post or page? */
+	if ( ! current_user_can( 'edit_post', $post->ID ) ) {
+		return $post->ID;
+	}
+
+	/**
+	 * OK, we're authenticated: we need to find and save the data
+	 * We'll put it into an array to make it easier to loop though.
+	 */
+
+	$details_meta['_thcmg']          = $_POST['_thcmg'];
+	$details_meta['_cbdmg']          = $_POST['_cbdmg'];
+	$details_meta['_mlserving']      = $_POST['_mlserving'];
+	$details_meta['_thccbdservings'] = $_POST['_thccbdservings'];
+	$details_meta['_netweight']      = $_POST['_netweight'];
+
+	/** Add values of $details_meta as custom fields */
+
+	foreach ( $details_meta as $key => $value ) { /** Cycle through the $details_meta array! */
+		if ( 'revision' === $post->post_type ) { /** Don't store custom data twice */
+			return;
+		}
+		$value = implode( ',', (array) $value ); /** If $value is an array, make it a CSV (unlikely) */
+		if ( get_post_meta( $post->ID, $key, false ) ) { /** If the custom field already has a value */
+			update_post_meta( $post->ID, $key, $value );
+		} else { /** If the custom field doesn't have a value */
+			add_post_meta( $post->ID, $key, $value );
+		}
+		if ( ! $value ) { /** Delete if blank */
+			delete_post_meta( $post->ID, $key );
+		}
+	}
+
+}
+
+add_action( 'save_post', 'wpd_tinctures_details_save_meta', 1, 2 ); /** Save the custom fields */
