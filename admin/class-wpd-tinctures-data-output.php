@@ -60,6 +60,6 @@ if ( in_array( get_post_type(), array( 'tinctures' ) ) ) { ?>
 add_action( 'wpd_dataoutput_bottom', 'wpd_tinctures_categories' );
 function wpd_tinctures_categories() { ?>
 	<?php if ( in_array( get_post_type(), array( 'tinctures' ) ) ) { ?>
-		<td><span>Categories:</span></td><td><?php echo get_the_term_list( $post->ID, 'wpd_tinctures_category', '', ', ' ); ?></td>
+		<tr><td><span>Categories:</span></td><td><?php echo get_the_term_list( $post->ID, 'wpd_tinctures_category', '', ', ' ); ?></td></tr>
 	<?php } ?>
 <?php }
