@@ -12,7 +12,11 @@ This plugin adds a Tinctures menu type to the WP Dispensary menu plugin.
 
 == Description ==
 
-This plugin adds a Gear menu type to the [WP Dispensary](https://www.wpdispensary.com) menu plugin.
+This plugin adds a Tinctures menu type to the [WP Dispensary](https://www.wpdispensary.com) menu plugin.
+
+**Release Notes**
+
+You can read full details in our [blog post](https://www.wpdispensary.com/dispensary-tinctures-add-on/).
 
 **Requirements**
 
