@@ -41,14 +41,5 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 
 == Changelog ==
 
-= 1.2.0 =
-
-= 1.1.0 =
-* Added in additional action hook in `admin/class-wpd-gear-shortcodes.php`
-* Added new shortcode options in `admin/class-wpd-gear-shortcodes.php`
-* Fixed term name for gear categories in `admin/class-wpd-gear-data-output.php`
-* Fixed term name for gear categories in `admin/class-wpd-gear-widgets.php`
-* Updated image display to include default images in `admin/class-wpd-gear-shortcodes.php`
-
 = 1.0 =
 * Initial release
