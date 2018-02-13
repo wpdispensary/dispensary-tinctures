@@ -56,9 +56,24 @@ if ( in_array( get_post_type(), array( 'tinctures' ) ) ) { ?>
 
 } // function
 
-/** Tinctures Categories Output */
-add_action( 'wpd_dataoutput_bottom', 'wpd_tinctures_categories' );
-function wpd_tinctures_categories() { ?>
+/** Tinctures Details Output */
+add_action( 'wpd_dataoutput_bottom', 'wpd_tinctures_details_data' );
+function wpd_tinctures_details_data() { ?>
+	<?php if ( ! get_post_meta( get_the_ID(), '_thcmg', true ) ) { } else { ?>
+		<tr><td><span>THC mg per serving:</span></td><td><?php echo get_post_meta( get_the_id(), '_thcmg', true ); ?></td></tr>
+	<?php } ?>
+	<?php if ( ! get_post_meta( get_the_ID(), '_cbdmg', true ) ) { } else { ?>
+		<tr><td><span>CBD mg per serving:</span></td><td><?php echo get_post_meta( get_the_id(), '_cbdmg', true ); ?></td></tr>
+	<?php } ?>
+	<?php if ( ! get_post_meta( get_the_ID(), '_mlserving', true ) ) { } else { ?>
+		<tr><td><span>mL per serving:</span></td><td><?php echo get_post_meta( get_the_id(), '_mlserving', true ); ?></td></tr>
+	<?php } ?>
+	<?php if ( ! get_post_meta( get_the_ID(), '_thccbdservings', true ) ) { } else { ?>
+		<tr><td><span>Servings:</span></td><td><?php echo get_post_meta( get_the_id(), '_thccbdservings', true ); ?></td></tr>
+	<?php } ?>
+	<?php if ( ! get_post_meta( get_the_ID(), '_netweight', true ) ) { } else { ?>
+		<tr><td><span>Net weight:</span></td><td><?php echo get_post_meta( get_the_id(), '_netweight', true ); ?> oz</td></tr>
+	<?php } ?>
 	<?php if ( in_array( get_post_type(), array( 'tinctures' ) ) ) { ?>
 		<tr><td><span>Categories:</span></td><td><?php echo get_the_term_list( $post->ID, 'wpd_tinctures_category', '', ', ' ); ?></td></tr>
 	<?php } ?>
