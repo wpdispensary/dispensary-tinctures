@@ -67,8 +67,8 @@ class WPD_Tinctures {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'WPD_GEAR_VERSION' ) ) {
-			$this->version = WPD_GEAR_VERSION;
+		if ( defined( 'WPD_TINCTURES_VERSION' ) ) {
+			$this->version = WPD_TINCTURES_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
