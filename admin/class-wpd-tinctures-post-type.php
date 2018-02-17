@@ -80,4 +80,4 @@ function wpd_tinctures_add_admin_menu() {
 //create a submenu under Settings
 	add_submenu_page( 'wpd-settings', 'WP Dispensary\'s Tinctures', 'Tinctures', 'manage_options', 'edit.php?post_type=tinctures', NULL );
 }
-add_action( 'admin_menu', 'wpd_tinctures_add_admin_menu', 10 );
+add_action( 'admin_menu', 'wpd_tinctures_add_admin_menu', 11 );
