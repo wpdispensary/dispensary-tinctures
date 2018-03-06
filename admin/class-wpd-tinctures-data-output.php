@@ -87,3 +87,10 @@ function wpd_tinctures_ingredients_data() { ?>
 	<?php } ?>
 <?php }
 
+/** Tinctures Vendors Output */
+add_action( 'wpd_dataoutput_bottom', 'wpd_tinctures_vendor_data' );
+function wpd_tinctures_vendor_data() { ?>
+	<?php if ( ! get_the_term_list( get_the_ID(), 'vendor', true ) ) { } else { ?>
+		<tr><td><span>Vendors:</span></td><td><?php echo get_the_term_list( $post->ID, 'vendor', '', ', ' ); ?></td></tr>
+	<?php } ?>
+<?php }
