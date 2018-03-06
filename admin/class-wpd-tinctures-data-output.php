@@ -78,3 +78,12 @@ function wpd_tinctures_details_data() { ?>
 		<tr><td><span>Categories:</span></td><td><?php echo get_the_term_list( get_the_id(), 'wpd_tinctures_category', '', ', ' ); ?></td></tr>
 	<?php } ?>
 <?php }
+
+/** Tinctures Ingredients Output */
+add_action( 'wpd_dataoutput_bottom', 'wpd_tinctures_ingredients_data' );
+function wpd_tinctures_ingredients_data() { ?>
+	<?php if ( ! get_the_term_list( get_the_ID(), 'ingredients', true ) ) { } else { ?>
+		<tr><td><span>Ingredients:</span></td><td><?php echo get_the_term_list( $post->ID, 'ingredients', '', ', ' ); ?></td></tr>
+	<?php } ?>
+<?php }
+
