@@ -10,7 +10,7 @@
  * @wordpress-plugin
  * Plugin Name:       WP Dispensary's Tinctures
  * Plugin URI:        https://www.wpdispensary.com/dispensary-tinctures-add-on
- * Description:       This plugin adds a TINCTURES menu type to the WP Dispensary menu plugin. Brought to you by <a href="http://www.deviodigital.com/">Devio Digital</a> &amp; <a href="https://www.wpdispensary.com">WP Dispensary</a>.
+ * Description:       This plugin adds a Tinctures menu type to the WP Dispensary menu plugin. Brought to you by <a href="http://www.deviodigital.com/">Devio Digital</a> &amp; <a href="https://www.wpdispensary.com">WP Dispensary</a>.
  * Version:           1.0.0
  * Author:            WP Dispensary
  * Author URI:        http://www.wpdispensary.com
