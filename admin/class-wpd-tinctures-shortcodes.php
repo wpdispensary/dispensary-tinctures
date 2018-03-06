@@ -253,9 +253,13 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 		if( get_post_type() == 'tinctures' ) {
 			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
 				$pricingeach = '<strong>'. $wpd_cost_phrase .':</strong> $' . get_post_meta( get_the_id(), '_priceeach', true ) . ' each';
+			} else {
+				$pricingeach = '';
 			}
 			if ( get_post_meta( get_the_ID(), '_priceperpack', true ) ) {
 				$pricingperpack = ' &middot; ' . get_post_meta( get_the_id(), '_unitsperpack', true ) . ' for $' . get_post_meta( get_the_id(), '_priceperpack', true ) . '';
+			} else {
+				$pricingperpack = '';
 			}
 		}
 
