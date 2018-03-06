@@ -55,3 +55,14 @@ function wpdispensary_tincturescategory() {
 	) );
 
 }
+
+/**
+ * Function to add ingredients taxonomy to "Tinctures" menu type
+ *
+ * @since    1.1.0
+ */
+function wpd_tinctures_ingredients( $array ) {
+    $array[] = 'tinctures';
+    return $array;
+}
+add_filter( 'wpd_ingredients_tax_type', 'wpd_tinctures_ingredients' );
