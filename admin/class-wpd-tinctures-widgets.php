@@ -28,7 +28,7 @@ class wpd_tinctures_widget extends WP_Widget {
 
 		parent::__construct(
 			'wpd_tinctures_widget',
-			__( 'Recent Tinctures', 'wp-dispensary' ),
+			__( 'Dispensary Tinctures', 'wp-dispensary' ),
 			array(
 				'description' => __( 'Your most recent Tinctures', 'wp-dispensary' ),
 				'classname'   => 'wp-dispensary-widget',
