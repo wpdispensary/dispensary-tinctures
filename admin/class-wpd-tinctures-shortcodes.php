@@ -40,7 +40,7 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 	);
 
 	if ( 'show' === $viewall ) {
-		$tinctureslink = get_bloginfo( 'home' ) . '/tinctures/';
+		$tinctureslink = get_bloginfo( 'url' ) . '/tinctures/';
 		$viewtinctures = '<span class="wp-dispensary-view-all"><a href="' . apply_filters( 'wpd_tinctures_shortcode_view_all', $tinctureslink ) .'">(view all)</a></span>';
 	} else {
 		$viewtinctures = '';
