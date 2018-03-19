@@ -20,6 +20,11 @@ if ( ! function_exists( 'wpdispensary_tinctures' ) ) {
 /** Register Custom Post Type */
 function wpdispensary_tinctures() {
 
+	/**
+	 * Defining variables
+	 */
+	$rewrite = '';
+
 	$labels = array(
 		'name'                  => _x( 'Tinctures', 'Post Type General Name', 'wpd-tinctures' ),
 		'singular_name'         => _x( 'Tincture', 'Post Type Singular Name', 'wpd-tinctures' ),
