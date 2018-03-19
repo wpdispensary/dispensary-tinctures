@@ -81,7 +81,9 @@ function wpd_tinctures_details_data() { ?>
 
 /** Tinctures Ingredients Output */
 add_action( 'wpd_dataoutput_bottom', 'wpd_tinctures_ingredients_data' );
-function wpd_tinctures_ingredients_data() { ?>
+function wpd_tinctures_ingredients_data() {
+	global $post;
+?>
 	<?php if ( ! get_the_term_list( get_the_ID(), 'ingredients', true ) ) { } else { ?>
 		<tr><td><span>Ingredients:</span></td><td><?php echo get_the_term_list( $post->ID, 'ingredients', '', ', ' ); ?></td></tr>
 	<?php } ?>
@@ -89,7 +91,9 @@ function wpd_tinctures_ingredients_data() { ?>
 
 /** Tinctures Vendors Output */
 add_action( 'wpd_dataoutput_bottom', 'wpd_tinctures_vendor_data' );
-function wpd_tinctures_vendor_data() { ?>
+function wpd_tinctures_vendor_data() {
+	global $post;
+?>
 	<?php if ( ! get_the_term_list( get_the_ID(), 'vendor', true ) ) { } else { ?>
 		<tr><td><span>Vendors:</span></td><td><?php echo get_the_term_list( $post->ID, 'vendor', '', ', ' ); ?></td></tr>
 	<?php } ?>
