@@ -74,7 +74,7 @@ function wpd_tinctures_prices_save_meta( $post_id, $post ) {
 	 * Verify this came from the our screen and with proper authorization,
 	 * because save_post can be triggered at other times
 	 */
-	if ( ! wp_verify_nonce( $_POST['tincturespricesmeta_noncename'], plugin_basename( __FILE__ ) ) ) {
+	if ( ! isset( $_POST['tincturespricesmeta_noncename' ] ) || ! wp_verify_nonce( $_POST['tincturespricesmeta_noncename'], plugin_basename( __FILE__ ) ) ) {
 		return $post->ID;
 	}
 
@@ -190,7 +190,7 @@ function wpd_tinctures_details_save_meta( $post_id, $post ) {
 	 * Verify this came from the our screen and with proper authorization,
 	 * because save_post can be triggered at other times
 	 */
-	if ( ! wp_verify_nonce( $_POST['tincturesdetailsmeta_noncename'], plugin_basename( __FILE__ ) ) ) {
+	if ( ! isset( $_POST['tincturesdetailsmeta_noncename' ] ) || ! wp_verify_nonce( $_POST['tincturesdetailsmeta_noncename'], plugin_basename( __FILE__ ) ) ) {
 		return $post->ID;
 	}
 
