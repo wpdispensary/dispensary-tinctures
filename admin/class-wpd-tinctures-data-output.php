@@ -31,6 +31,7 @@ add_filter( 'wpd_pricingoutput_top_array', 'wpd_tinctures_priceoutput' );
 add_filter( 'wpd_pricingoutput_bottom_array', 'wpd_tinctures_priceoutput' );
 add_filter( 'wpd_pricingoutput_end_array', 'wpd_tinctures_priceoutput' );
 add_filter( 'wpd_pricingoutput_after_array', 'wpd_tinctures_priceoutput' );
+add_filter( 'wpd_pricing_table_placement_array', 'wpd_tinctures_priceoutput' );
 
 /**
  * Action Hooks
