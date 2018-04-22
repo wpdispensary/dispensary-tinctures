@@ -40,10 +40,15 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 
 == Installation ==
 
-1. In your WordPress admin dashboard, go to `Plugins` -> `Add New` and search for **Dispensary Tinctures** 
+1. In your WordPress admin dashboard, go to `Plugins` -> `Add New` and search for **Dispensary Tinctures**
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 1.1.1 =
+* Added better alignment of `Prices` and `Details` metabox input `admin/css/wpd-tinctures-admin.css`
+* Added filter for the new table placement in **WP Dispensary v2.0+** in `admin/class-wpd-tinctures-data-output.php`
+* Updated admin submenu order number in `admin/wpd-tinctures-post-type.php`
 
 = 1.1 =
 * Added filter to add `ingredients` taxonomy to Tinctures in `admin/class-wpd-tinctures-taxonomies.php`

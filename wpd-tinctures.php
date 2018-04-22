@@ -11,7 +11,7 @@
  * Plugin Name:       WP Dispensary's Tinctures
  * Plugin URI:        https://www.wpdispensary.com/dispensary-tinctures-add-on
  * Description:       This plugin adds a Tinctures menu type to the WP Dispensary menu plugin. Brought to you by <a href="http://www.deviodigital.com/">Devio Digital</a> &amp; <a href="https://www.wpdispensary.com">WP Dispensary</a>.
- * Version:           1.1
+ * Version:           1.1.1
  * Author:            WP Dispensary
  * Author URI:        http://www.wpdispensary.com
  * License:           GPL-2.0+
@@ -30,7 +30,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'WPD_TINCTURES_VERSION', '1.1' );
+define( 'WPD_TINCTURES_VERSION', '1.1.1' );
 
 /**
  * The code that runs during plugin activation.
