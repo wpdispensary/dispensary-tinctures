@@ -1,2 +1,2 @@
 # WP Dispensary's Tinctures add-on
-Release notes and other information will be added here when the plugin is ready for release.
+[release notes](https://www.wpdispensary.com/dispensary-tinctures-add-on/) - [WordPress](https://www.wordpress.org/plugins/dispensary-tinctures/)
