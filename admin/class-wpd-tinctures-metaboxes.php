@@ -52,16 +52,22 @@ function wpd_tinctures_prices() {
 	$unitsperpack = get_post_meta( $post->ID, '_unitsperpack', true );
 
 	/** Echo out the fields */
+	echo '<div class="tincturesbox">';
 	echo '<p>Price per unit:</p>';
 	echo '<input type="text" name="_priceeach" value="' . esc_html( $priceeach ) . '" class="widefat" />';
+	echo '</div>';
 
 	/** Echo out the fields */
+	echo '<div class="tincturesbox">';
 	echo '<p>Price per pack:</p>';
 	echo '<input type="text" name="_priceperpack" value="' . esc_html( $priceperpack ) . '" class="widefat" />';
+	echo '</div>';
 
 	/** Echo out the fields */
+	echo '<div class="tincturesbox">';
 	echo '<p>Units per pack:</p>';
 	echo '<input type="number" name="_unitsperpack" value="' . esc_html( $unitsperpack ) . '" class="widefat" />';
+	echo '</div>';
 
 }
 
