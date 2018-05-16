@@ -1,5 +1,5 @@
 === Dispensary Tinctures ===
-Contributors: deviodigital
+Contributors: deviodigital, wpdispensary
 Donate link: https://www.wpdispensary.com
 Tags: dispensary, cannabis, marijuana, wp-dispensary, tinctures
 Requires at least: 3.0.1
