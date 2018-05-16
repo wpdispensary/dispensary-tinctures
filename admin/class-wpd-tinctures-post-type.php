@@ -85,3 +85,14 @@ function wpd_tinctures_add_admin_menu() {
 	add_submenu_page( 'wpd-settings', 'WP Dispensary\'s Tinctures', 'Tinctures', 'manage_options', 'edit.php?post_type=tinctures', NULL );
 }
 add_action( 'admin_menu', 'wpd_tinctures_add_admin_menu', 3 );
+
+/**
+ * Function to add admin screen thumbnails to "Tinctures" menu type
+ *
+ * @since    1.2.0
+ */
+function wpd_tinctures_admin_screen_thumbnails( $array ) {
+    $array[] = 'tinctures';
+    return $array;
+}
+add_filter( 'wpd_admin_screen_thumbnails', 'wpd_tinctures_admin_screen_thumbnails' );
