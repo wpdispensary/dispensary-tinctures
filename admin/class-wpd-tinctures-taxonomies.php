@@ -26,17 +26,17 @@ add_action( 'init', 'wpdispensary_tincturescategory', 0 );
 function wpdispensary_tincturescategory() {
 
 	$labels = array(
-		'name'              => _x( 'Tinctures Categories', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Tinctures Category', 'taxonomy singular name' ),
-		'search_items'      => __( 'Search Tinctures Categories' ),
-		'all_items'         => __( 'All Tinctures Categories' ),
-		'parent_item'       => __( 'Parent Tinctures Category' ),
-		'parent_item_colon' => __( 'Parent Tinctures Category:' ),
-		'edit_item'         => __( 'Edit Tinctures Category' ),
-		'update_item'       => __( 'Update Tinctures Category' ),
-		'add_new_item'      => __( 'Add New Tinctures Category' ),
-		'new_item_name'     => __( 'New Tinctures Category Name' ),
-		'not_found'         => 'No tinctures categories found',
+		'name'              => _x( 'Categories', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Category', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Categories' ),
+		'all_items'         => __( 'All Categories' ),
+		'parent_item'       => __( 'Parent Category' ),
+		'parent_item_colon' => __( 'Parent Category:' ),
+		'edit_item'         => __( 'Edit Category' ),
+		'update_item'       => __( 'Update Category' ),
+		'add_new_item'      => __( 'Add New Category' ),
+		'new_item_name'     => __( 'New Category Name' ),
+		'not_found'         => 'No categories found',
 		'menu_name'         => __( 'Categories' ),
 	);
 
