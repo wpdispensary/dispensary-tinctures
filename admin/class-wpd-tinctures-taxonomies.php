@@ -44,7 +44,7 @@ function wpdispensary_tincturescategory() {
 		'hierarchical'      => true,
 		'labels'            => $labels,
 		'show_ui'           => true,
-		'show_in_rest'      => true,
+		'show_in_rest'      => false,
 		'show_admin_column' => true,
 		'show_in_nav_menus' => true,
 		'query_var'         => true,
