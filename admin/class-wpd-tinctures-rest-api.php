@@ -24,11 +24,13 @@ add_filter( 'rest_prepare_tinctures', 'wpd_tinctures_featuredimage', 10, 3 );
 
 /**
  * Add Category taxonomy for the Tinctures Custom Post Type
+ *
+ * @since 1.2
  */
 function wpd_tinctures_category( $data, $post, $request ) {
-	$_data                           = $data->data;
-	$_data['wpd_tinctures_category'] = get_the_term_list( $post->ID, 'wpd_tinctures_category', '', ' ', '' );
-	$data->data                      = $_data;
+	$_data                       = $data->data;
+	$_data['tinctures_category'] = get_the_term_list( $post->ID, 'wpd_tinctures_category', '', ' ', '' );
+	$data->data                  = $_data;
 	return $data;
 }
 add_filter( 'rest_prepare_tinctures', 'wpd_tinctures_category', 10, 3 );
