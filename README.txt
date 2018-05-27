@@ -4,7 +4,7 @@ Donate link: https://www.wpdispensary.com
 Tags: dispensary, cannabis, marijuana, wp-dispensary, tinctures
 Requires at least: 3.0.1
 Tested up to: 4.9.6
-Stable tag: 1.1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,15 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 1.2.0 =
+* Add div wrappers to metabox input in `admin/class-wpd-tinctures-taxonomies.php`
+* Add admin screen thumbnails to Tinctures menu type in `admin/class-wpd-tinctures-post-type.php`
+* Add `categories` endpoint to the REST API in `admin/class-wpd-tinctures-rest-api.php`
+* Remove `wpd_tinctures_category` endpoint in `admin/class-wpd-tinctures-post-type.php`
+* Update working for Tinctures post type in `admin/class-wpd-tinctures-post-type.php`
+* Update Tinctures category wording in `admin/class-wpd-tinctures-taxonomies.php`
+* Update `tinctures_category` endpoint name in `admin/class-wpd-tinctures-rest-api.php`
 
 = 1.1.1 =
 * Added better alignment of `Prices` and `Details` metabox input `admin/css/wpd-tinctures-admin.css`
