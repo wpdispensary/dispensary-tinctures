@@ -147,7 +147,7 @@ function wpd_tinctures_details_metaboxes() {
 add_action( 'add_meta_boxes', 'wpd_tinctures_details_metaboxes' );
 
 /**
- * Single Prices
+ * Tincture Details
  */
 function wpd_tinctures_details() {
 	global $post;
