@@ -20,10 +20,21 @@ if ( ! function_exists( 'wpdispensary_tinctures' ) ) {
 /** Register Custom Post Type */
 function wpdispensary_tinctures() {
 
+	$wpd_tinctures_slug = get_option( 'wpd_tinctures_slug' );
+
+	if ( '' == $wpd_tinctures_slug ) {
+		$wpd_tinctures_slug = 'tinctures';
+	}
+
 	/**
 	 * Defining variables
 	 */
-	$rewrite = '';
+	$rewrite = array(
+		'slug'       => $wpd_tinctures_slug,
+		'with_front' => true,
+		'pages'      => true,
+		'feeds'      => true,
+	);
 
 	$labels = array(
 		'name'                  => _x( 'Tinctures', 'Post Type General Name', 'wpd-tinctures' ),

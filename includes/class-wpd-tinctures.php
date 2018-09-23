@@ -157,6 +157,11 @@ class WPD_Tinctures {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-tinctures-widgets.php';
 
+		/**
+		 * The class responsible for creating custom permalinks
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-tinctures-settings.php';
+
 		$this->loader = new WPD_Tinctures_Loader();
 
 	}
