@@ -38,9 +38,9 @@ class wpd_tinctures_widget extends WP_Widget {
 
 		parent::__construct(
 			'wpd_tinctures_widget',
-			__( 'Dispensary ' . $wpd_tinctures_slug_cap, 'wp-dispensary' ),
+			__( 'Dispensary ' . $wpd_tinctures_slug_cap, 'wpd-tinctures' ),
 			array(
-				'description' => __( 'Your most recent ' . $wpd_tinctures_slug, 'wp-dispensary' ),
+				'description' => __( 'Your most recent ' . $wpd_tinctures_slug, 'wpd-tinctures' ),
 				'classname'   => 'wp-dispensary-widget',
 			)
 		);
@@ -196,37 +196,37 @@ class wpd_tinctures_widget extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, $defaults );
 	?>
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Widget Title:', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Widget Title:', 'wpd-tinctures' ); ?></label>
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_html( $instance['title'] ); ?>" />
 	</p>
 
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>"><?php esc_html_e( 'Amount of ' . $wpd_tinctures_slug . ' to show:', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>"><?php esc_html_e( 'Amount of ' . $wpd_tinctures_slug . ' to show:', 'wpd-tinctures' ); ?></label>
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>" type="number" name="<?php echo esc_attr( $this->get_field_name( 'limit' ) ); ?>" min="1" max="999" value="<?php echo esc_html( $instance['limit'] ); ?>" />
 	</p>
 
 	<p>
 		<input class="checkbox" type="checkbox" <?php checked( $instance['order'], 'on' ); ?> id="<?php echo esc_attr( $this->get_field_id( 'order' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'order' ) ); ?>" />
-		<label for="<?php echo esc_attr( $this->get_field_id( 'order' ) ); ?>"><?php esc_html_e( 'Randomize output?', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'order' ) ); ?>"><?php esc_html_e( 'Randomize output?', 'wpd-tinctures' ); ?></label>
 	</p>
 
 	<p>
 		<input class="checkbox" type="checkbox" <?php checked( $instance['tincturesname'], 'on' ); ?> id="<?php echo esc_attr( $this->get_field_id( 'tincturesname' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'tincturesname' ) ); ?>" />
-		<label for="<?php echo esc_attr( $this->get_field_id( 'tincturesname' ) ); ?>"><?php esc_html_e( 'Display ' . $wpd_tinctures_slug . ' name?', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'tincturesname' ) ); ?>"><?php esc_html_e( 'Display ' . $wpd_tinctures_slug . ' name?', 'wpd-tinctures' ); ?></label>
 	</p>
 
 	<p>
 		<input class="checkbox" type="checkbox" <?php checked( $instance['tincturescategory'], 'on' ); ?> id="<?php echo esc_attr( $this->get_field_id( 'tincturescategory' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'tincturescategory' ) ); ?>" />
-		<label for="<?php echo esc_attr( $this->get_field_id( 'tincturescategory' ) ); ?>"><?php esc_html_e( 'Display ' . $wpd_tinctures_slug . ' category?', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'tincturescategory' ) ); ?>"><?php esc_html_e( 'Display ' . $wpd_tinctures_slug . ' category?', 'wpd-tinctures' ); ?></label>
 	</p>
 
 	<p>
 		<input class="checkbox" type="checkbox" <?php checked( $instance['featuredimage'], 'on' ); ?> id="<?php echo esc_attr( $this->get_field_id( 'featuredimage' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'featuredimage' ) ); ?>" />
-		<label for="<?php echo esc_attr( $this->get_field_id( 'featuredimage' ) ); ?>"><?php esc_html_e( 'Display featured image?', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'featuredimage' ) ); ?>"><?php esc_html_e( 'Display featured image?', 'wpd-tinctures' ); ?></label>
 	</p>
 
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'imagesize' ) ); ?>"><?php esc_html_e( 'Image size:', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'imagesize' ) ); ?>"><?php esc_html_e( 'Image size:', 'wpd-tinctures' ); ?></label>
 		<?php
 			$terms = array( 'wpdispensary-widget', 'dispensary-image', 'wpd-small', 'wpd-medium', 'wpd-large' );
 		if ( $terms ) {
