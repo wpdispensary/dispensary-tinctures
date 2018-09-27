@@ -13,6 +13,16 @@
  * Tinctures Shortcode Fuction
  */
 function wpdispensary_tinctures_shortcode( $atts ) {
+	// Get permalink base for Tinctures.
+	$wpd_tinctures_slug = get_option( 'wpd_tinctures_slug' );
+
+	// If custom base is empty, set default.
+	if ( '' == $wpd_tinctures_slug ) {
+		$wpd_tinctures_slug = 'tinctures';
+	}
+
+	// Capitalize first letter of new slug.
+	$wpd_tinctures_slug_cap = ucfirst( $wpd_tinctures_slug );
 
 	/* Attributes */
 	extract( shortcode_atts(
@@ -21,7 +31,7 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 			'class'   => '',
 			'name'    => 'show',
 			'info'    => 'show',
-			'title'   => 'Tinctures',
+			'title'   => $wpd_tinctures_slug_cap,
 			'image'   => 'show',
 			'imgsize' => 'dispensary-image',
 			'viewall' => '',
@@ -283,13 +293,13 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 			if ( null === $thumbnail_url && 'full' === $imagesize ) {
 				$wpd_shortcodes_default_image = site_url() . '/wp-content/plugins/wp-dispensary/public/images/wpd-large.jpg';
 				$defaultimg                   = apply_filters( 'wpd_shortcodes_default_image', $wpd_shortcodes_default_image );
-				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="Menu - Tinctures" /></a>';
+				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="Menu - ' . $wpd_tinctures_slug_cap . '" /></a>';
 			} elseif ( null !== $thumbnail_url ) {
-				$showimage = '<a href="' . get_permalink() . '"><img src="' . $thumbnail_url . '" alt="Menu - Tinctures" /></a>';
+				$showimage = '<a href="' . get_permalink() . '"><img src="' . $thumbnail_url . '" alt="Menu - ' . $wpd_tinctures_slug_cap . '" /></a>';
 			} else {
 				$wpd_shortcodes_default_image = site_url() . '/wp-content/plugins/wp-dispensary/public/images/' . $imagesize . '.jpg';
 				$defaultimg                   = apply_filters( 'wpd_shortcodes_default_image', $wpd_shortcodes_default_image );
-				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="Menu - Tinctures" /></a>';
+				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="Menu - ' . $wpd_tinctures_slug_cap . '" /></a>';
 			}
 		} else {
 			$showimage = '';

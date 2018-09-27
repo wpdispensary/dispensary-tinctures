@@ -25,12 +25,22 @@ class wpd_tinctures_widget extends WP_Widget {
 	 * @return      void
 	 */
 	public function __construct() {
+		// Get permalink base for Tinctures.
+		$wpd_tinctures_slug = get_option( 'wpd_tinctures_slug' );
+
+		// If custom base is empty, set default.
+		if ( '' == $wpd_tinctures_slug ) {
+			$wpd_tinctures_slug = 'tinctures';
+		}
+
+		// Capitalize first letter of new slug.
+		$wpd_tinctures_slug_cap = ucfirst( $wpd_tinctures_slug );
 
 		parent::__construct(
 			'wpd_tinctures_widget',
-			__( 'Dispensary Tinctures', 'wp-dispensary' ),
+			__( 'Dispensary ' . $wpd_tinctures_slug_cap, 'wp-dispensary' ),
 			array(
-				'description' => __( 'Your most recent Tinctures', 'wp-dispensary' ),
+				'description' => __( 'Your most recent ' . $wpd_tinctures_slug, 'wp-dispensary' ),
 				'classname'   => 'wp-dispensary-widget',
 			)
 		);
@@ -162,8 +172,19 @@ class wpd_tinctures_widget extends WP_Widget {
 	 * @return      void
 	 */
 	public function form( $instance ) {
+		// Get custom permalink base for Gear.
+		$wpd_tinctures_slug = get_option( 'wpd_tinctures_slug' );
+
+		// If custom base is empty, set default.
+		if ( '' == $wpd_tinctures_slug ) {
+			$wpd_tinctures_slug = 'tinctures';
+		}
+
+		// Capitalize first letter of new slug.
+		$wpd_tinctures_slug_cap = ucfirst( $wpd_tinctures_slug );
+
 		$defaults = array(
-			'title'             => 'Recent Tinctures',
+			'title'             => 'Recent ' . $wpd_tinctures_slug_cap,
 			'limit'             => '5',
 			'order'             => '',
 			'featuredimage'     => '',
@@ -180,7 +201,7 @@ class wpd_tinctures_widget extends WP_Widget {
 	</p>
 
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>"><?php esc_html_e( 'Amount of tinctures to show:', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>"><?php esc_html_e( 'Amount of ' . $wpd_tinctures_slug . ' to show:', 'wp-dispensary' ); ?></label>
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>" type="number" name="<?php echo esc_attr( $this->get_field_name( 'limit' ) ); ?>" min="1" max="999" value="<?php echo esc_html( $instance['limit'] ); ?>" />
 	</p>
 
@@ -191,12 +212,12 @@ class wpd_tinctures_widget extends WP_Widget {
 
 	<p>
 		<input class="checkbox" type="checkbox" <?php checked( $instance['tincturesname'], 'on' ); ?> id="<?php echo esc_attr( $this->get_field_id( 'tincturesname' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'tincturesname' ) ); ?>" />
-		<label for="<?php echo esc_attr( $this->get_field_id( 'tincturesname' ) ); ?>"><?php esc_html_e( 'Display tinctures name?', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'tincturesname' ) ); ?>"><?php esc_html_e( 'Display ' . $wpd_tinctures_slug . ' name?', 'wp-dispensary' ); ?></label>
 	</p>
 
 	<p>
 		<input class="checkbox" type="checkbox" <?php checked( $instance['tincturescategory'], 'on' ); ?> id="<?php echo esc_attr( $this->get_field_id( 'tincturescategory' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'tincturescategory' ) ); ?>" />
-		<label for="<?php echo esc_attr( $this->get_field_id( 'tincturescategory' ) ); ?>"><?php esc_html_e( 'Display tinctures category?', 'wp-dispensary' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'tincturescategory' ) ); ?>"><?php esc_html_e( 'Display ' . $wpd_tinctures_slug . ' category?', 'wp-dispensary' ); ?></label>
 	</p>
 
 	<p>

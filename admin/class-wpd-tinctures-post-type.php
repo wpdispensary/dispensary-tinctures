@@ -20,11 +20,16 @@ if ( ! function_exists( 'wpdispensary_tinctures' ) ) {
 /** Register Custom Post Type */
 function wpdispensary_tinctures() {
 
+	// Get permalink base for Tinctures.
 	$wpd_tinctures_slug = get_option( 'wpd_tinctures_slug' );
 
+	// If custom base is empty, set default.
 	if ( '' == $wpd_tinctures_slug ) {
 		$wpd_tinctures_slug = 'tinctures';
 	}
+
+	// Capitalize first letter of new slug.
+	$wpd_tinctures_slug_cap = ucfirst( $wpd_tinctures_slug );
 
 	/**
 	 * Defining variables
@@ -37,35 +42,35 @@ function wpdispensary_tinctures() {
 	);
 
 	$labels = array(
-		'name'                  => _x( 'Tinctures', 'Post Type General Name', 'wpd-tinctures' ),
-		'singular_name'         => _x( 'Tincture', 'Post Type Singular Name', 'wpd-tinctures' ),
-		'menu_name'             => __( 'Tinctures', 'wpd-tinctures' ),
-		'name_admin_bar'        => __( 'Tinctures', 'wpd-tinctures' ),
-		'archives'              => __( 'Tinctures Archives', 'wpd-tinctures' ),
-		'parent_item_colon'     => __( 'Parent Tincture:', 'wpd-tinctures' ),
-		'all_items'             => __( 'All Tinctures', 'wpd-tinctures' ),
-		'add_new_item'          => __( 'Add New Tincture', 'wpd-tinctures' ),
+		'name'                  => _x( $wpd_tinctures_slug_cap, 'Post Type General Name', 'wpd-tinctures' ),
+		'singular_name'         => _x( $wpd_tinctures_slug_cap, 'Post Type Singular Name', 'wpd-tinctures' ),
+		'menu_name'             => __( $wpd_tinctures_slug_cap, 'wpd-tinctures' ),
+		'name_admin_bar'        => __( $wpd_tinctures_slug_cap, 'wpd-tinctures' ),
+		'archives'              => __( $wpd_tinctures_slug_cap . ' Archives', 'wpd-tinctures' ),
+		'parent_item_colon'     => __( 'Parent ' . $wpd_tinctures_slug_cap . ':', 'wpd-tinctures' ),
+		'all_items'             => __( 'All ' . $wpd_tinctures_slug_cap, 'wpd-tinctures' ),
+		'add_new_item'          => __( 'Add New ' . $wpd_tinctures_slug_cap, 'wpd-tinctures' ),
 		'add_new'               => __( 'Add New', 'wpd-tinctures' ),
-		'new_item'              => __( 'New Tincture', 'wpd-tinctures' ),
-		'edit_item'             => __( 'Edit Tincture', 'wpd-tinctures' ),
-		'update_item'           => __( 'Update Tincture', 'wpd-tinctures' ),
-		'view_item'             => __( 'View Tincture', 'wpd-tinctures' ),
-		'search_items'          => __( 'Search Tinctures', 'wpd-tinctures' ),
+		'new_item'              => __( 'New ' . $wpd_tinctures_slug_cap, 'wpd-tinctures' ),
+		'edit_item'             => __( 'Edit ' . $wpd_tinctures_slug_cap, 'wpd-tinctures' ),
+		'update_item'           => __( 'Update ' . $wpd_tinctures_slug_cap, 'wpd-tinctures' ),
+		'view_item'             => __( 'View ' . $wpd_tinctures_slug_cap, 'wpd-tinctures' ),
+		'search_items'          => __( 'Search ' . $wpd_tinctures_slug_cap, 'wpd-tinctures' ),
 		'not_found'             => __( 'Not found', 'wpd-tinctures' ),
 		'not_found_in_trash'    => __( 'Not found in Trash', 'wpd-tinctures' ),
 		'featured_image'        => __( 'Featured Image', 'wpd-tinctures' ),
 		'set_featured_image'    => __( 'Set featured image', 'wpd-tinctures' ),
 		'remove_featured_image' => __( 'Remove featured image', 'wpd-tinctures' ),
 		'use_featured_image'    => __( 'Use as featured image', 'wpd-tinctures' ),
-		'insert_into_item'      => __( 'Insert into Tincture', 'wpd-tinctures' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this Tincture', 'wpd-tinctures' ),
-		'items_list'            => __( 'Tinctures list', 'wpd-tinctures' ),
-		'items_list_navigation' => __( 'Tinctures list navigation', 'wpd-tinctures' ),
-		'filter_items_list'     => __( 'Filter tinctures list', 'wpd-tinctures' ),
+		'insert_into_item'      => __( 'Insert into ' . $wpd_tinctures_slug, 'wpd-tinctures' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this ' . $wpd_tinctures_slug, 'wpd-tinctures' ),
+		'items_list'            => __( $wpd_tinctures_slug_cap . ' list', 'wpd-tinctures' ),
+		'items_list_navigation' => __( $wpd_tinctures_slug_cap . ' list navigation', 'wpd-tinctures' ),
+		'filter_items_list'     => __( 'Filter ' . $wpd_tinctures_slug . ' list', 'wpd-tinctures' ),
 	);
 	$args = array(
-		'label'               => __( 'Tinctures', 'wpd-tinctures' ),
-		'description'         => __( 'Display your dispensary tinctures', 'wpd-tinctures' ),
+		'label'               => __( $wpd_tinctures_slug_cap, 'wpd-tinctures' ),
+		'description'         => __( 'Display the ' . $wpd_tinctures_slug . ' from your menu', 'wpd-tinctures' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor', 'thumbnail', ),
 		'taxonomies'          => array( ),
@@ -93,7 +98,18 @@ add_action( 'init', 'wpdispensary_tinctures', 0 );
 }
 
 function wpd_tinctures_add_admin_menu() {
-	add_submenu_page( 'wpd-settings', 'WP Dispensary\'s Tinctures', 'Tinctures', 'manage_options', 'edit.php?post_type=tinctures', NULL );
+	// Get permalink base for Tinctures.
+	$wpd_tinctures_slug = get_option( 'wpd_tinctures_slug' );
+
+	// If custom base is empty, set default.
+	if ( '' == $wpd_tinctures_slug ) {
+		$wpd_tinctures_slug = 'tinctures';
+	}
+
+	// Capitalize first letter of new slug.
+	$wpd_tinctures_slug_cap = ucfirst( $wpd_tinctures_slug );
+
+	add_submenu_page( 'wpd-settings', 'WP Dispensary\'s ' . $wpd_tinctures_slug_cap, $wpd_tinctures_slug_cap, 'manage_options', 'edit.php?post_type=tinctures', NULL );
 }
 add_action( 'admin_menu', 'wpd_tinctures_add_admin_menu', 3 );
 
