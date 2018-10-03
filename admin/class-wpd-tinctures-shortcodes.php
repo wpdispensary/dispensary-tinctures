@@ -36,7 +36,8 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 			'imgsize' => 'dispensary-image',
 			'viewall' => '',
 		),
-		$atts
+		$atts,
+		'wpd_tinctures'
 	) );
 
 	/**
