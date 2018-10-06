@@ -63,13 +63,13 @@ add_filter( 'rest_prepare_tinctures', 'wpd_tinctures_category_numbers', 10, 3 );
  * 
  * @since 1.3.0
  */
-function wpd_tinctures_allergens( $data, $post, $request ) {
+function wpd_tinctures_allergens_tax( $data, $post, $request ) {
 	$_data              = $data->data;
 	$_data['allergens'] = get_the_term_list( $post->ID, 'allergens', '', ' ', '' );
 	$data->data         = $_data;
 	return $data;
 }
-add_filter( 'rest_prepare_edibles', 'wpd_tinctures_allergens', 10, 3 );
+add_filter( 'rest_prepare_tinctures', 'wpd_tinctures_allergens_tax', 10, 3 );
 
 
 /**
