@@ -72,31 +72,15 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 		$thumbnail_url       = $thumbnail_url_array[0];
 		$querytitle          = get_the_title();
 
-		$wp_dispensary_options = get_option( 'wp_dispensary_option_name' ); // Array of All Options.
-		if ( ! isset( $wp_dispensary_options['wpd_hide_details'] ) ) {
-			$wpd_hide_details = '';
+		// Access all WP Dispensary Display Settings.
+		$wpd_settings = get_option( 'wpdas_display' );
+
+		if ( isset ( $wpd_settings['wpd_pricing_phrase_custom'] ) && '' !== $wpd_settings['wpd_pricing_phrase_custom'] ) {
+			$wpd_cost_phrase = $wpd_settings['wpd_pricing_phrase_custom'];
+		} elseif ( isset ( $wpd_settings['wpd_pricing_phrase'] ) && 'Donation' === $wpd_settings['wpd_pricing_phrase'] ) {
+			$wpd_cost_phrase = __( 'Donation', 'wp-dispensary' );
 		} else {
-			$wpd_hide_details = $wp_dispensary_options['wpd_hide_details'];
-		}
-		if ( ! isset( $wp_dispensary_options['wpd_hide_pricing'] ) ) {
-			$wpd_hide_pricing = '';
-		} else {
-			$wpd_hide_pricing = $wp_dispensary_options['wpd_hide_pricing'];
-		}
-		if ( ! isset( $wp_dispensary_options['wpd_content_placement'] ) ) {
-			$wpd_content_placement = '';
-		} else {
-			$wpd_content_placement = $wp_dispensary_options['wpd_content_placement'];
-		}
-		if ( null === $wp_dispensary_options['wpd_currency'] ) {
-			$wpd_currency = 'USD';
-		} else {
-			$wpd_currency = $wp_dispensary_options['wpd_currency'];
-		}
-		if ( null === $wp_dispensary_options['wpd_cost_phrase'] ) {
-			$wpd_cost_phrase = 'Price';
-		} else {
-			$wpd_cost_phrase = $wp_dispensary_options['wpd_cost_phrase']; // costphrase.
+			$wpd_cost_phrase = __( 'Price', 'wp-dispensary' );
 		}
 
 		if( get_post_type() == 'tinctures' ) {
