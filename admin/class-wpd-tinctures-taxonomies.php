@@ -36,7 +36,7 @@ function wpdispensary_tincturescategory() {
 		'update_item'       => __( 'Update Category' ),
 		'add_new_item'      => __( 'Add New Category' ),
 		'new_item_name'     => __( 'New Category Name' ),
-		'not_found'         => 'No categories found',
+		'not_found'         => __( 'No categories found' ),
 		'menu_name'         => __( 'Categories' ),
 	);
 

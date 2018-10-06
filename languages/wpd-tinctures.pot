@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Dispensary's Tinctures\n"
-"POT-Creation-Date: 2018-10-01 08:50-0400\n"
-"PO-Revision-Date: 2018-10-01 08:50-0400\n"
+"POT-Creation-Date: 2018-10-06 01:04-0400\n"
+"PO-Revision-Date: 2018-10-06 00:58-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,12 +21,73 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
+#: admin/class-wpd-tinctures-data-output.php:51
+msgid "Price:"
+msgstr ""
+
+#: admin/class-wpd-tinctures-data-output.php:54
+msgid "per pack"
+msgstr ""
+
+#: admin/class-wpd-tinctures-data-output.php:66
+msgid "Servings:"
+msgstr ""
+
+#: admin/class-wpd-tinctures-data-output.php:69
+#: admin/class-wpd-tinctures-metaboxes.php:172
+msgid "THC mg per serving:"
+msgstr ""
+
+#: admin/class-wpd-tinctures-data-output.php:72
+msgid "CBD mg per sering:"
+msgstr ""
+
+#: admin/class-wpd-tinctures-data-output.php:75
+msgid "mL per serving:"
+msgstr ""
+
+#: admin/class-wpd-tinctures-data-output.php:78
+msgid "Net weight:"
+msgstr ""
+
+#: admin/class-wpd-tinctures-data-output.php:81
+msgid "Categories:"
+msgstr ""
+
+#: admin/class-wpd-tinctures-data-output.php:93
+msgid "Ingredients:"
+msgstr ""
+
+#: admin/class-wpd-tinctures-data-output.php:105
+msgid "Allergens:"
+msgstr ""
+
+#: admin/class-wpd-tinctures-data-output.php:117
+msgid "Vendors:"
+msgstr ""
+
 #: admin/class-wpd-tinctures-metaboxes.php:27
 msgid "Product Pricing"
 msgstr ""
 
 #: admin/class-wpd-tinctures-metaboxes.php:137
 msgid "Tincture Details"
+msgstr ""
+
+#: admin/class-wpd-tinctures-metaboxes.php:168
+msgid "Servings"
+msgstr ""
+
+#: admin/class-wpd-tinctures-metaboxes.php:176
+msgid "CBD mg per serving"
+msgstr ""
+
+#: admin/class-wpd-tinctures-metaboxes.php:180
+msgid "mL per serving"
+msgstr ""
+
+#: admin/class-wpd-tinctures-metaboxes.php:184
+msgid "Net weight (ounces):"
 msgstr ""
 
 #: admin/class-wpd-tinctures-post-type.php:45
@@ -145,6 +206,28 @@ msgstr ""
 msgid "Tinctures Base"
 msgstr ""
 
+#: admin/class-wpd-tinctures-shortcodes.php:81
+msgid "Donation"
+msgstr ""
+
+#: admin/class-wpd-tinctures-shortcodes.php:83
+msgid "Price"
+msgstr ""
+
+#: admin/class-wpd-tinctures-shortcodes.php:88
+msgid "each"
+msgstr ""
+
+#: admin/class-wpd-tinctures-shortcodes.php:93
+msgid "for"
+msgstr ""
+
+#: admin/class-wpd-tinctures-shortcodes.php:119
+#: admin/class-wpd-tinctures-shortcodes.php:121
+#: admin/class-wpd-tinctures-shortcodes.php:125
+msgid "Menu"
+msgstr ""
+
 #: admin/class-wpd-tinctures-taxonomies.php:29
 msgctxt "taxonomy general name"
 msgid "Categories"
@@ -185,6 +268,10 @@ msgstr ""
 
 #: admin/class-wpd-tinctures-taxonomies.php:38
 msgid "New Category Name"
+msgstr ""
+
+#: admin/class-wpd-tinctures-taxonomies.php:39
+msgid "No categories found"
 msgstr ""
 
 #: admin/class-wpd-tinctures-taxonomies.php:40

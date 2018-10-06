@@ -85,12 +85,12 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 
 		if( get_post_type() == 'tinctures' ) {
 			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-				$pricingeach = '<strong>'. $wpd_cost_phrase .':</strong> ' . wpd_currency_code() . '' . get_post_meta( get_the_id(), '_priceeach', true ) . ' each';
+				$pricingeach = '<strong>'. $wpd_cost_phrase .':</strong> ' . wpd_currency_code() . '' . get_post_meta( get_the_id(), '_priceeach', true ) . ' ' . __( 'each', 'wp-dispensary' );
 			} else {
 				$pricingeach = '';
 			}
 			if ( get_post_meta( get_the_ID(), '_priceperpack', true ) ) {
-				$pricingperpack = ' &middot; ' . get_post_meta( get_the_id(), '_unitsperpack', true ) . ' for ' . wpd_currency_code() . '' . get_post_meta( get_the_id(), '_priceperpack', true ) . '';
+				$pricingperpack = ' &middot; ' . get_post_meta( get_the_id(), '_unitsperpack', true ) . ' ' . __( 'for', 'wp-dispensary' ) . ' ' . wpd_currency_code() . '' . get_post_meta( get_the_id(), '_priceperpack', true );
 			} else {
 				$pricingperpack = '';
 			}
@@ -116,13 +116,13 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 			if ( null === $thumbnail_url && 'full' === $imagesize ) {
 				$wpd_shortcodes_default_image = site_url() . '/wp-content/plugins/wp-dispensary/public/images/wpd-large.jpg';
 				$defaultimg                   = apply_filters( 'wpd_shortcodes_default_image', $wpd_shortcodes_default_image );
-				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="Menu - ' . $wpd_tinctures_slug_cap . '" /></a>';
+				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="' . __( 'Menu', 'wp-dispensary' ) . ' - ' . $wpd_tinctures_slug_cap . '" /></a>';
 			} elseif ( null !== $thumbnail_url ) {
-				$showimage = '<a href="' . get_permalink() . '"><img src="' . $thumbnail_url . '" alt="Menu - ' . $wpd_tinctures_slug_cap . '" /></a>';
+				$showimage = '<a href="' . get_permalink() . '"><img src="' . $thumbnail_url . '" alt="' . __( 'Menu', 'wp-dispensary' ) . ' - ' . $wpd_tinctures_slug_cap . '" /></a>';
 			} else {
 				$wpd_shortcodes_default_image = site_url() . '/wp-content/plugins/wp-dispensary/public/images/' . $imagesize . '.jpg';
 				$defaultimg                   = apply_filters( 'wpd_shortcodes_default_image', $wpd_shortcodes_default_image );
-				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="Menu - ' . $wpd_tinctures_slug_cap . '" /></a>';
+				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="' . __( 'Menu', 'wp-dispensary' ) . ' - ' . $wpd_tinctures_slug_cap . '" /></a>';
 			}
 		} else {
 			$showimage = '';
