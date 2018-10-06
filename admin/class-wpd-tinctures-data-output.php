@@ -60,6 +60,8 @@ if ( in_array( get_post_type(), array( 'tinctures' ) ) ) { ?>
 /** Tinctures Details Output */
 add_action( 'wpd_dataoutput_bottom', 'wpd_tinctures_details_data' );
 function wpd_tinctures_details_data() { ?>
+<?php
+if ( in_array( get_post_type(), array( 'tinctures' ) ) ) { ?>
 	<?php if ( ! get_post_meta( get_the_ID(), '_thcmg', true ) ) { } else { ?>
 		<tr><td><span>THC mg per serving:</span></td><td><?php echo get_post_meta( get_the_id(), '_thcmg', true ); ?></td></tr>
 	<?php } ?>
@@ -78,6 +80,7 @@ function wpd_tinctures_details_data() { ?>
 	<?php if ( ! get_the_term_list( get_the_ID(), 'wpd_tinctures_category', true ) ) { } else { ?>
 		<tr><td><span>Categories:</span></td><td><?php echo get_the_term_list( get_the_id(), 'wpd_tinctures_category', '', ', ' ); ?></td></tr>
 	<?php } ?>
+<?php } // if in_array ?>
 <?php }
 
 /** Tinctures Ingredients Output */
