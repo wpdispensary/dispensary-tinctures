@@ -101,6 +101,9 @@ function wpd_tinctures_vendor_data() {
 	global $post;
 ?>
 	<?php if ( in_array( get_post_type(), array( 'tinctures' ) ) ) { ?>
+		<?php if ( ! get_the_term_list( get_the_ID(), 'allergens', true ) ) { } else { ?>
+		<tr><td><span>Allergens:</span></td><td><?php echo get_the_term_list( $post->ID, 'allergens', '', ', ' ); ?></td></tr>
+	<?php } ?>
 	<?php if ( ! get_the_term_list( get_the_ID(), 'vendor', true ) ) { } else { ?>
 		<tr><td><span>Vendors:</span></td><td><?php echo get_the_term_list( $post->ID, 'vendor', '', ', ' ); ?></td></tr>
 	<?php } ?>

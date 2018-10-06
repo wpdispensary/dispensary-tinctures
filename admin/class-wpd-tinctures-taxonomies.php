@@ -77,3 +77,15 @@ function wpd_tinctures_vendor( $array ) {
     return $array;
 }
 add_filter( 'wpd_vendor_tax_type', 'wpd_tinctures_vendor' );
+
+/**
+ * Function to add allergens taxonomy to "Tinctures" menu type
+ *
+ * @since    1.4.0
+ */
+function wpd_tinctures_allergens( $array ) {
+    $array[] = 'tinctures';
+    return $array;
+}
+add_filter( 'wpd_allergens_tax_type', 'wpd_tinctures_allergens' );
+
