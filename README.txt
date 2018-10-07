@@ -4,7 +4,7 @@ Donate link: https://www.wpdispensary.com
 Tags: dispensary, cannabis, marijuana, wp-dispensary, tinctures
 Requires at least: 3.0.1
 Tested up to: 4.9.8
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,25 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 1.4.0 =
+* Added shortcode atts filter name to the Tinctures shortcode in `admin/class-wpd-tinctures-shortcodes.php`
+* Added Allergens taxonomy for Edibles in `admin/class-wpd-tinctures-taxonomies.php`
+* Added Allergens taxonomy to data output in `admin/class-wpd-tinctures-data-output.php`
+* Added REST API endpoint for Allergens in `admin/class-wpd-tinctures-rest-api.php`
+* Fixed bug to only display details if in Tinctures menu type in `admin/class-wpd-tinctures-data-output.php`
+* Updated `Tinctures` display text to change based on custom permalink base in `admin/class-wpd-tinctures-post-type.php`
+* Updated `Tinctures` display text to change based on custom permalink base in `admin/class-wpd-tinctures-shortcodes.php`
+* Updated `Tinctures` display text to change based on custom permalink base in `admin/class-wpd-tinctures-widgets.php`
+* Updated translatable text to work with variable in `admin/class-wpd-tinctures-post-type.php`
+* Updated translatable text to work with variable in `admin/class-wpd-tinctures-post-type.php`
+* Updated shortcode to use the `wpd_currency_code` function in `admin/class-wpd-tinctures-shortcodes.php`
+* Updated Price/Donation display option updates in `admin/class-wpd-tinctures-shortcodes.php`
+* Updated various text strings to be translatable in `admin/class-wpd-tinctures-data-output.php`
+* Updated various text strings to be translatable in `admin/class-wpd-tinctures-metaboxes.php`
+* Updated various text strings to be translatable in `admin/class-wpd-tinctures-shortcodes.php`
+* Updated various text strings to be translatable in `admin/class-wpd-tinctures-taxonomies.php`
+* Updated `.pot` file with new text strings for localization in `languages/wpd-tinctures.pot`
 
 = 1.3.0 =
 * Added `.pot` file for localization in `languages/wpd-tinctures.pot`
