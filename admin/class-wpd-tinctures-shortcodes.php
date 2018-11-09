@@ -75,25 +75,9 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 		// Access all WP Dispensary Display Settings.
 		$wpd_settings = get_option( 'wpdas_display' );
 
-		if ( isset ( $wpd_settings['wpd_pricing_phrase_custom'] ) && '' !== $wpd_settings['wpd_pricing_phrase_custom'] ) {
-			$wpd_cost_phrase = $wpd_settings['wpd_pricing_phrase_custom'];
-		} elseif ( isset ( $wpd_settings['wpd_pricing_phrase'] ) && 'Donation' === $wpd_settings['wpd_pricing_phrase'] ) {
-			$wpd_cost_phrase = __( 'Donation', 'wp-dispensary' );
-		} else {
-			$wpd_cost_phrase = __( 'Price', 'wp-dispensary' );
-		}
-
-		if( get_post_type() == 'tinctures' ) {
-			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-				$pricingeach = '<strong>'. $wpd_cost_phrase .':</strong> ' . wpd_currency_code() . '' . get_post_meta( get_the_id(), '_priceeach', true ) . ' ' . __( 'each', 'wp-dispensary' );
-			} else {
-				$pricingeach = '';
-			}
-			if ( get_post_meta( get_the_ID(), '_priceperpack', true ) ) {
-				$pricingperpack = ' &middot; ' . get_post_meta( get_the_id(), '_unitsperpack', true ) . ' ' . __( 'for', 'wp-dispensary' ) . ' ' . wpd_currency_code() . '' . get_post_meta( get_the_id(), '_priceperpack', true );
-			} else {
-				$pricingperpack = '';
-			}
+		if ( get_post_type() == 'tinctures' ) {
+			// Price.
+			$tincturepricing = '<span class="wpd-productinfo pricing"><strong>' . wpd_pricing_phrase( $singular = true ) . ':</strong> ' . wpd_tinctures_prices_simple() . '</span>';
 		}
 
 		/** Check shortcode options input by user */
@@ -104,9 +88,9 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 			$showname = '';
 		}
 
-		if( get_post_type() == 'tinctures' ) {
+		if ( get_post_type() == 'tinctures' ) {
 			if ( $info == "show" ) {
-				$showinfo = '<span class="wpd-productinfo">' . $pricingeach . '' . $pricingperpack . '</span>';
+				$showinfo = '<span class="wpd-productinfo">' . $tincturepricing . '</span>';
 			} else {
 				$showinfo = '';
 			}
