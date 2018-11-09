@@ -162,6 +162,13 @@ class WPD_Tinctures {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpd-tinctures-settings.php';
 
+		/**
+		 * Adding in custom helper functions that are used throughout the rest of the plugin
+		 *
+		 * @since    1.5
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/wpd-tinctures-functions.php';
+
 		$this->loader = new WPD_Tinctures_Loader();
 
 	}
