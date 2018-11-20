@@ -93,6 +93,9 @@ class wpd_tinctures_widget extends WP_Widget {
 		);
 
 		while ( $wpd_tinctures_widget->have_posts() ) :
+
+			do_action( 'wpd_tinctures_widget_inside_loop_before' );
+
 			$wpd_tinctures_widget->the_post();
 
 			$do_not_duplicate = $post->ID;
@@ -122,6 +125,8 @@ class wpd_tinctures_widget extends WP_Widget {
 				echo '</li>';
 
 			}
+
+			do_action( 'wpd_tinctures_widget_inside_loop_after' );
 
 		endwhile; // End loop.
 
