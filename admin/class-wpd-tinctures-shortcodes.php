@@ -77,7 +77,7 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 
 		if ( get_post_type() == 'tinctures' ) {
 			// Price.
-			$tincturepricing = '<span class="wpd-productinfo pricing"><strong>' . wpd_pricing_phrase( $singular = true ) . ':</strong> ' . wpd_tinctures_prices_simple() . '</span>';
+			$tincturepricing = get_wpd_tinctures_prices_simple( NULL, TRUE );
 		}
 
 		/** Check shortcode options input by user */
@@ -90,7 +90,7 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 
 		if ( get_post_type() == 'tinctures' ) {
 			if ( $info == "show" ) {
-				$showinfo = '<span class="wpd-productinfo">' . $tincturepricing . '</span>';
+				$showinfo = $tincturepricing;
 			} else {
 				$showinfo = '';
 			}
