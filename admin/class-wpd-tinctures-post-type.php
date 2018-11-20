@@ -127,7 +127,7 @@ add_filter( 'wpd_admin_screen_thumbnails', 'wpd_tinctures_admin_screen_thumbnail
 /**
  * Update messages for Tinctures.
  * 
- * @since 1.6
+ * @since 1.5
  */
 function wpd_tinctures_updated_messages( $messages ) {
 	if ( 'tinctures' === get_post_type() ) {
