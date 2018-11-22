@@ -74,5 +74,3 @@ function get_wpd_tinctures_prices_simple( $id = NULL, $phrase = NULL ) {
 	return $phrase_final;
 
 }
-
-}
