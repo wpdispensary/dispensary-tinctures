@@ -74,3 +74,14 @@ function get_wpd_tinctures_prices_simple( $id = NULL, $phrase = NULL ) {
 	return $phrase_final;
 
 }
+
+/**
+ * Add tinctures categories to WPD eCommerce single item display
+ * 
+ * @since 1.6
+ */
+function wpd_tinctures_item_types() {
+	// Display Tinctures Category
+	echo "<span class='wpd-ecommerce category tinctures'>" . get_the_term_list( get_the_ID(), 'wpd_tinctures_category', '', ', ' ) . "</span>";
+}
+add_action( 'wpd_ecommerce_item_types_inside_after', 'wpd_tinctures_item_types' );
