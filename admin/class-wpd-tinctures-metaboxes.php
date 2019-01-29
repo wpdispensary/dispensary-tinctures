@@ -24,7 +24,7 @@ function wpd_tinctures_pricing_metaboxes() {
 	foreach ( $screens as $screen ) {
 		add_meta_box(
 			'wpd_tinctures_prices',
-			__( 'Product Pricing', 'wp-dispensary' ),
+			__( 'Product Pricing', 'wpd-tinctures' ),
 			'wpd_tinctures_prices',
 			$screen,
 			'normal',
@@ -53,19 +53,19 @@ function wpd_tinctures_prices() {
 
 	/** Echo out the fields */
 	echo '<div class="tincturesbox">';
-	echo '<p>Price per unit:</p>';
+	echo '<p>' . __( 'Price per unit', 'wpd-tinctures' ) . '</p>';
 	echo '<input type="text" name="_priceeach" value="' . esc_html( $priceeach ) . '" class="widefat" />';
 	echo '</div>';
 
 	/** Echo out the fields */
 	echo '<div class="tincturesbox">';
-	echo '<p>Price per pack:</p>';
+	echo '<p>' . __( 'Price per pack', 'wpd-tinctures' ) . '</p>';
 	echo '<input type="text" name="_priceperpack" value="' . esc_html( $priceperpack ) . '" class="widefat" />';
 	echo '</div>';
 
 	/** Echo out the fields */
 	echo '<div class="tincturesbox">';
-	echo '<p>Units per pack:</p>';
+	echo '<p>' . __( 'Units per pack', 'wpd-tinctures' ) . '</p>';
 	echo '<input type="number" name="_unitsperpack" value="' . esc_html( $unitsperpack ) . '" class="widefat" />';
 	echo '</div>';
 
@@ -165,23 +165,23 @@ function wpd_tinctures_details() {
 
 	/** Echo out the fields */
 	echo '<div class="tincturesdetailsbox">';
-	echo '<p>' . __( 'Servings', 'wp-dispensary' ) . '</p>';
+	echo '<p>' . __( 'Servings', 'wpd-tinctures' ) . '</p>';
 	echo '<input type="text" name="_thccbdservings" value="' . esc_html( $thccbdservings ) . '" class="widefat" />';
 	echo '</div>';
 	echo '<div class="tincturesdetailsbox">';
-	echo '<p>' . __( 'THC mg per serving:', 'wp-dispensary' ) . '</p>';
+	echo '<p>' . __( 'THC mg per serving', 'wpd-tinctures' ) . '</p>';
 	echo '<input type="text" name="_thcmg" value="' . esc_html( $thcmg ) . '" class="widefat" />';
 	echo '</div>';
 	echo '<div class="tincturesdetailsbox">';
-	echo '<p>' . __( 'CBD mg per serving', 'wp-dispensary' ) . '</p>';
+	echo '<p>' . __( 'CBD mg per serving', 'wpd-tinctures' ) . '</p>';
 	echo '<input type="text" name="_cbdmg" value="' . esc_html( $cbdmg ) . '" class="widefat" />';
 	echo '</div>';
 	echo '<div class="tincturesdetailsbox">';
-	echo '<p>' . __( 'mL per serving', 'wp-dispensary' ) . '</p>';
+	echo '<p>' . __( 'mL per serving', 'wpd-tinctures' ) . '</p>';
 	echo '<input type="text" name="_mlserving" value="' . esc_html( $mlserving ) . '" class="widefat" />';
 	echo '</div>';
 	echo '<div class="tincturesdetailsbox">';
-	echo '<p>' . __( 'Net weight (ounces):', 'wp-dispensary' ) . '</p>';
+	echo '<p>' . __( 'Net weight (ounces)', 'wpd-tinctures' ) . '</p>';
 	echo '<input type="text" name="_netweight" value="' . esc_html( $netweight ) . '" class="widefat" />';
 	echo '</div>';
 

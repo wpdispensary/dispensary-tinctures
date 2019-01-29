@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Dispensary's Tinctures\n"
-"POT-Creation-Date: 2018-10-06 01:04-0400\n"
-"PO-Revision-Date: 2018-10-06 00:58-0400\n"
+"POT-Creation-Date: 2019-01-29 13:07-0500\n"
+"PO-Revision-Date: 2019-01-29 13:07-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: admin/class-wpd-tinctures-data-output.php:51
-msgid "Price:"
+msgid "Price"
 msgstr ""
 
 #: admin/class-wpd-tinctures-data-output.php:54
@@ -30,64 +30,71 @@ msgid "per pack"
 msgstr ""
 
 #: admin/class-wpd-tinctures-data-output.php:66
-msgid "Servings:"
+#: admin/class-wpd-tinctures-metaboxes.php:168
+msgid "Servings"
 msgstr ""
 
 #: admin/class-wpd-tinctures-data-output.php:69
 #: admin/class-wpd-tinctures-metaboxes.php:172
-msgid "THC mg per serving:"
+msgid "THC mg per serving"
 msgstr ""
 
 #: admin/class-wpd-tinctures-data-output.php:72
-msgid "CBD mg per sering:"
+msgid "CBD mg per sering"
 msgstr ""
 
 #: admin/class-wpd-tinctures-data-output.php:75
-msgid "mL per serving:"
+#: admin/class-wpd-tinctures-metaboxes.php:180
+msgid "mL per serving"
 msgstr ""
 
 #: admin/class-wpd-tinctures-data-output.php:78
-msgid "Net weight:"
+msgid "Net weight"
 msgstr ""
 
 #: admin/class-wpd-tinctures-data-output.php:81
-msgid "Categories:"
+#: admin/class-wpd-tinctures-taxonomies.php:40
+msgid "Categories"
 msgstr ""
 
 #: admin/class-wpd-tinctures-data-output.php:93
-msgid "Ingredients:"
+msgid "Ingredients"
 msgstr ""
 
 #: admin/class-wpd-tinctures-data-output.php:105
-msgid "Allergens:"
+msgid "Allergens"
 msgstr ""
 
 #: admin/class-wpd-tinctures-data-output.php:117
-msgid "Vendors:"
+msgid "Vendors"
 msgstr ""
 
 #: admin/class-wpd-tinctures-metaboxes.php:27
 msgid "Product Pricing"
 msgstr ""
 
-#: admin/class-wpd-tinctures-metaboxes.php:137
-msgid "Tincture Details"
+#: admin/class-wpd-tinctures-metaboxes.php:56
+msgid "Price per unit"
 msgstr ""
 
-#: admin/class-wpd-tinctures-metaboxes.php:168
-msgid "Servings"
+#: admin/class-wpd-tinctures-metaboxes.php:62
+msgid "Price per pack"
+msgstr ""
+
+#: admin/class-wpd-tinctures-metaboxes.php:68
+msgid "Units per pack"
+msgstr ""
+
+#: admin/class-wpd-tinctures-metaboxes.php:137
+msgid "Tincture Details"
 msgstr ""
 
 #: admin/class-wpd-tinctures-metaboxes.php:176
 msgid "CBD mg per serving"
 msgstr ""
 
-#: admin/class-wpd-tinctures-metaboxes.php:180
-msgid "mL per serving"
-msgstr ""
-
 #: admin/class-wpd-tinctures-metaboxes.php:184
-msgid "Net weight (ounces):"
+msgid "Net weight (ounces)"
 msgstr ""
 
 #: admin/class-wpd-tinctures-post-type.php:45
@@ -202,29 +209,67 @@ msgstr ""
 msgid "Display the %s from your menu"
 msgstr ""
 
+#: admin/class-wpd-tinctures-post-type.php:148
+#, php-format
+msgid "%s updated. <a href=\"%s\">View %s</a>"
+msgstr ""
+
+#: admin/class-wpd-tinctures-post-type.php:149
+msgid "Custom field updated."
+msgstr ""
+
+#: admin/class-wpd-tinctures-post-type.php:150
+msgid "Custom field deleted."
+msgstr ""
+
+#: admin/class-wpd-tinctures-post-type.php:151
+#, php-format
+msgid "%s updated."
+msgstr ""
+
+#: admin/class-wpd-tinctures-post-type.php:152
+#, php-format
+msgid "%s restored to revision from %s"
+msgstr ""
+
+#: admin/class-wpd-tinctures-post-type.php:153
+#, php-format
+msgid "%s published. <a href=\"%s\">View %s</a>"
+msgstr ""
+
+#: admin/class-wpd-tinctures-post-type.php:154
+#, php-format
+msgid "%s saved."
+msgstr ""
+
+#: admin/class-wpd-tinctures-post-type.php:155
+#, php-format
+msgid "%s submitted. <a target=\"_blank\" href=\"%s\">Preview %s</a>"
+msgstr ""
+
+#: admin/class-wpd-tinctures-post-type.php:156
+#, php-format
+msgid ""
+"%s scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
+"\">Preview %s</a>"
+msgstr ""
+
+#: admin/class-wpd-tinctures-post-type.php:157
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: admin/class-wpd-tinctures-post-type.php:158
+#, php-format
+msgid "%s draft updated. <a target=\"_blank\" href=\"%s\">Preview %s</a>"
+msgstr ""
+
 #: admin/class-wpd-tinctures-settings.php:33
 msgid "Tinctures Base"
 msgstr ""
 
-#: admin/class-wpd-tinctures-shortcodes.php:81
-msgid "Donation"
-msgstr ""
-
-#: admin/class-wpd-tinctures-shortcodes.php:83
-msgid "Price"
-msgstr ""
-
-#: admin/class-wpd-tinctures-shortcodes.php:88
-msgid "each"
-msgstr ""
-
-#: admin/class-wpd-tinctures-shortcodes.php:93
-msgid "for"
-msgstr ""
-
-#: admin/class-wpd-tinctures-shortcodes.php:119
-#: admin/class-wpd-tinctures-shortcodes.php:121
-#: admin/class-wpd-tinctures-shortcodes.php:125
+#: admin/class-wpd-tinctures-shortcodes.php:107
+#: admin/class-wpd-tinctures-shortcodes.php:109
+#: admin/class-wpd-tinctures-shortcodes.php:113
 msgid "Menu"
 msgstr ""
 
@@ -274,10 +319,6 @@ msgstr ""
 msgid "No categories found"
 msgstr ""
 
-#: admin/class-wpd-tinctures-taxonomies.php:40
-msgid "Categories"
-msgstr ""
-
 #: admin/class-wpd-tinctures-widgets.php:41
 msgid "Dispensary "
 msgstr ""
@@ -286,28 +327,28 @@ msgstr ""
 msgid "Your most recent "
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:199
+#: admin/class-wpd-tinctures-widgets.php:204
 msgid "Widget Title:"
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:204
+#: admin/class-wpd-tinctures-widgets.php:209
 msgid "Amount of "
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:210
+#: admin/class-wpd-tinctures-widgets.php:215
 msgid "Randomize output?"
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:215
 #: admin/class-wpd-tinctures-widgets.php:220
+#: admin/class-wpd-tinctures-widgets.php:225
 msgid "Display "
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:225
+#: admin/class-wpd-tinctures-widgets.php:230
 msgid "Display featured image?"
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:229
+#: admin/class-wpd-tinctures-widgets.php:234
 msgid "Image size:"
 msgstr ""
 
