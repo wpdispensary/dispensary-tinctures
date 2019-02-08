@@ -3,8 +3,8 @@ Contributors: wpdispensary, deviodigital
 Donate link: https://www.wpdispensary.com
 Tags: dispensary, cannabis, marijuana, wp-dispensary, tinctures
 Requires at least: 3.0.1
-Tested up to: 4.9.9
-Stable tag: 1.6
+Tested up to: 5.0.3
+Stable tag: 1.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,9 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 1.6.1 =
+* Removed custom REST API codes for Gear category endpoint in `admin/class=wpd-tinctures-rest-api.php`
 
 = 1.6.0 =
 * Added Tinctures category to the eCommerce add-on's single item display in `admin/wpd-tinctures-functions.php`
