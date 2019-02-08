@@ -28,3 +28,26 @@
 	position: relative;
 	width: 18%;
 }
+
+
+/* Widget styles
+-------------------------------------------------------------- */
+
+div.widget[id*=_wpd_tinctures_] .widget-top,
+div.widget[id*=_wpd_tinctures_] .widget-top:hover {
+	border-color: #76bd43;
+}
+
+div.widget[id*=_wpd_tinctures_] .widget-title,
+div.widget[id*=_wpd_tinctures_] .widget-title h3 {
+	background: #76bd43;
+	color: #FFF;
+}
+
+div.widget[id*=_wpd_tinctures_] .widget-title .in-widget-title {
+	color: rgba(255,255,255,0.6);
+}
+
+div.widget[id*=_wpd_tinctures_] .widget-action {
+	color: #FFF;
+}
