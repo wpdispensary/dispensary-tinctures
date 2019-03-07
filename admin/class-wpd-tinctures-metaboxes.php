@@ -94,9 +94,9 @@ function wpd_tinctures_prices_save_meta( $post_id, $post ) {
 	 * We'll put it into an array to make it easier to loop though.
 	 */
 
-	$prices_meta['_priceeach']    = $_POST['_priceeach'];
-	$prices_meta['_priceperpack'] = $_POST['_priceperpack'];
-	$prices_meta['_unitsperpack'] = $_POST['_unitsperpack'];
+	$prices_meta['_priceeach']    = esc_html( $_POST['_priceeach'] );
+	$prices_meta['_priceperpack'] = esc_html( $_POST['_priceperpack'] );
+	$prices_meta['_unitsperpack'] = esc_html( $_POST['_unitsperpack'] );
 
 	/** Add values of $prices_meta as custom fields */
 
@@ -210,11 +210,11 @@ function wpd_tinctures_details_save_meta( $post_id, $post ) {
 	 * We'll put it into an array to make it easier to loop though.
 	 */
 
-	$details_meta['_thcmg']          = $_POST['_thcmg'];
-	$details_meta['_cbdmg']          = $_POST['_cbdmg'];
-	$details_meta['_mlserving']      = $_POST['_mlserving'];
-	$details_meta['_thccbdservings'] = $_POST['_thccbdservings'];
-	$details_meta['_netweight']      = $_POST['_netweight'];
+	$details_meta['_thcmg']          = esc_html( $_POST['_thcmg'] );
+	$details_meta['_cbdmg']          = esc_html( $_POST['_cbdmg'] );
+	$details_meta['_mlserving']      = esc_html( $_POST['_mlserving'] );
+	$details_meta['_thccbdservings'] = esc_html( $_POST['_thccbdservings'] );
+	$details_meta['_netweight']      = esc_html( $_POST['_netweight'] );
 
 	/** Add values of $details_meta as custom fields */
 
