@@ -104,6 +104,8 @@ class wpd_tinctures_widget extends WP_Widget {
 
 				echo "<div class='wpdispensary-widget'>";
 
+				do_action( 'wpd_tinctures_widget_inside_top' );
+
 				wpd_product_image( $instance['imagesize'] );
 
 				if ( 'on' === $instance['tincturesname'] ) {
