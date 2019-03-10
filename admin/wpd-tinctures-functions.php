@@ -85,3 +85,17 @@ function wpd_tinctures_item_types() {
 	echo "<span class='wpd-ecommerce category tinctures'>" . get_the_term_list( get_the_ID(), 'wpd_tinctures_category', '', ', ' ) . "</span>";
 }
 add_action( 'wpd_ecommerce_item_types_inside_after', 'wpd_tinctures_item_types' );
+
+/**
+ * Add tinctures to WP Dispensary menu types
+ * 
+ * @since 1.7
+ */
+function wpd_tinctures_menu_types( $menu_types ) {
+
+	// Add tinctures.
+	$menu_types['wpd-tinctures'] = __( 'Tinctures', 'wp-dispensary' );
+
+	return $menu_types;
+}
+add_filter( 'wpd_menu_types', 'wpd_tinctures_menu_types' );
