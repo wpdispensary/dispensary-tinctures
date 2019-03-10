@@ -61,16 +61,6 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 
 	while ( $wpdquery->have_posts() ) : $wpdquery->the_post();
 
-		if ( '' === $imgsize ) {
-			$imagesize = 'dispensary-image';
-		} else {
-			$imagesize = $imgsize;
-		}
-
-		$thumbnail_id        = get_post_thumbnail_id();
-		$thumbnail_url_array = wp_get_attachment_image_src( $thumbnail_id, $imagesize, false );
-		$thumbnail_url       = $thumbnail_url_array[0];
-
 		/** Check shortcode options input by user */
 
 		if ( 'show' == $name ) {
@@ -89,20 +79,10 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 			// Do nothing.
 		}
 
-		if ( 'show' === $image ) {
-			if ( null === $thumbnail_url && 'full' === $imagesize ) {
-				$wpd_shortcodes_default_image = site_url() . '/wp-content/plugins/wp-dispensary/public/images/wpd-large.jpg';
-				$defaultimg                   = apply_filters( 'wpd_shortcodes_default_image', $wpd_shortcodes_default_image );
-				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="' . __( 'Menu', 'wp-dispensary' ) . ' - ' . $wpd_tinctures_slug_cap . '" /></a>';
-			} elseif ( null !== $thumbnail_url ) {
-				$showimage = '<a href="' . get_permalink() . '"><img src="' . $thumbnail_url . '" alt="' . __( 'Menu', 'wp-dispensary' ) . ' - ' . $wpd_tinctures_slug_cap . '" /></a>';
-			} else {
-				$wpd_shortcodes_default_image = site_url() . '/wp-content/plugins/wp-dispensary/public/images/' . $imagesize . '.jpg';
-				$defaultimg                   = apply_filters( 'wpd_shortcodes_default_image', $wpd_shortcodes_default_image );
-				$showimage                    = '<a href="' . get_permalink() . '"><img src="' . $defaultimg . '" alt="' . __( 'Menu', 'wp-dispensary' ) . ' - ' . $wpd_tinctures_slug_cap . '" /></a>';
-			}
+		if ( '' === $imgsize ) {
+			$image_size = 'dispensary-image';
 		} else {
-			$showimage = '';
+			$image_size = $imgsize;
 		}
 
 		/** Shortcode display */
@@ -117,7 +97,7 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 			$wpd_shortcode_top_tinctures = ob_get_contents();
 		ob_end_clean();
 
-		$wpdposts .= '<div class="wpdshortcode wpd-tinctures ' . $class .'">'. $wpd_shortcode_top_tinctures .''. $wpd_shortcode_inside_top .''. $showimage;
+		$wpdposts .= '<div class="wpdshortcode wpd-tinctures ' . $class .'">'. $wpd_shortcode_top_tinctures .''. $wpd_shortcode_inside_top .''. get_wpd_product_image( $image_size );
 
 		ob_start();
 			do_action( 'wpd_shortcode_bottom_tinctures' );
