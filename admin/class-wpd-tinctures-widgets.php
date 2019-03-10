@@ -103,17 +103,18 @@ class wpd_tinctures_widget extends WP_Widget {
 			if ( 'on' === $instance['featuredimage'] ) {
 
 				echo "<div class='wpdispensary-widget'>";
-				do_action( 'wpd_tinctures_widget_inside_top' );
-				echo "<a href='" . esc_url( get_permalink( $post->ID ) ) . "'>";
-					the_post_thumbnail( $instance['imagesize'] );
-				echo '</a>';
+
+				wpd_product_image( $instance['imagesize'] );
+
 				if ( 'on' === $instance['tincturesname'] ) {
 					echo "<span class='wpdispensary-widget-title'><a href='" . esc_url( get_permalink( $post->ID ) ) . "'>" . get_the_title( $post->ID ) . "</a></span>";
 				}
 				if ( 'on' === $instance['tincturescategory'] ) {
 					echo "<span class='wpdispensary-widget-categories'>" . get_the_term_list( $post->ID, 'wpd_tinctures_category' ) . "</a></span>";
 				}
+
 				do_action( 'wpd_tinctures_widget_inside_bottom' );
+
 				echo '</div>';
 
 			} else {
