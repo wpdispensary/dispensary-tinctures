@@ -146,8 +146,8 @@ function wpd_tinctures_updated_messages( $messages ) {
 		$messages['post'] = array(
 			0 => '', // Unused. Messages start at index 1.
 			1 => sprintf( __( '%s updated. <a href="%s">View %s</a>' ), $wpd_tinctures_slug_cap, esc_url( get_permalink( $post_ID ) ), $wpd_tinctures_slug ),
-			2 => __( 'Custom field updated.' ),
-			3 => __( 'Custom field deleted.' ),
+			2 => __( 'Custom field updated.', 'wpd-tinctures' ),
+			3 => __( 'Custom field deleted.', 'wpd-tinctures' ),
 			4 => sprintf( __( '%s updated.' ), $wpd_tinctures_slug_cap ),
 			5 => isset( $_GET['revision'] ) ? sprintf( __( '%s restored to revision from %s' ), $wpd_tinctures_slug_cap, wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
 			6 => sprintf( __( '%s published. <a href="%s">View %s</a>' ), $wpd_tinctures_slug_cap, esc_url( get_permalink( $post_ID ) ), $wpd_tinctures_slug ),
