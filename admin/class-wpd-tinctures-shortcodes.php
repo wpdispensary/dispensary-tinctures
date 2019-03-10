@@ -70,10 +70,6 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 		$thumbnail_id        = get_post_thumbnail_id();
 		$thumbnail_url_array = wp_get_attachment_image_src( $thumbnail_id, $imagesize, false );
 		$thumbnail_url       = $thumbnail_url_array[0];
-		$querytitle          = get_the_title();
-
-		// Access all WP Dispensary Display Settings.
-		$wpd_settings = get_option( 'wpdas_display' );
 
 		if ( 'tinctures' == get_post_type() ) {
 			// Price.
@@ -85,7 +81,7 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 		/** Check shortcode options input by user */
 
 		if ( 'show' == $name ) {
-			$showname = '<p><strong><a href="' . get_permalink() . '">' . $querytitle . '</a></strong></p>';
+			$showname = '<p><strong><a href="' . get_permalink() . '">' . get_the_title() . '</a></strong></p>';
 		} else {
 			$showname = '';
 		}
