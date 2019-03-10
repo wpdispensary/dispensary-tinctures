@@ -236,3 +236,14 @@ function wpd_tinctures_details_save_meta( $post_id, $post ) {
 }
 
 add_action( 'save_post', 'wpd_tinctures_details_save_meta', 1, 2 ); /** Save the custom fields */
+
+/**
+ * Function to add Top Sellers metabox to "Tinctures" menu type
+ *
+ * @since    1.7.0
+ */
+function wpd_tinctures_topsellers( $array ) {
+    $array[] = 'tinctures';
+    return $array;
+}
+add_filter( 'wpd_top_sellers_metabox', 'wpd_tinctures_topsellers' );
