@@ -44,7 +44,7 @@ function wpdispensary_tincturescategory() {
 		'hierarchical'      => true,
 		'labels'            => $labels,
 		'show_ui'           => true,
-		'show_in_rest'      => false,
+		'show_in_rest'      => true,
 		'show_admin_column' => true,
 		'show_in_nav_menus' => true,
 		'query_var'         => true,
@@ -88,4 +88,3 @@ function wpd_tinctures_allergens( $array ) {
     return $array;
 }
 add_filter( 'wpd_allergens_tax_type', 'wpd_tinctures_allergens' );
-
