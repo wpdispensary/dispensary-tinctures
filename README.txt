@@ -3,8 +3,8 @@ Contributors: wpdispensary, deviodigital
 Donate link: https://www.wpdispensary.com
 Tags: dispensary, cannabis, marijuana, wp-dispensary, tinctures
 Requires at least: 3.0.1
-Tested up to: 5.0.3
-Stable tag: 1.6.1
+Tested up to: 5.1
+Stable tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,19 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 1.7 =
+* Added tinctures prices to `get_wpd_all_prices_simple` filter in `admin/wpd-tictures-functions.php`
+* Added tinctures to `wpd_menu_types` helper function in `admin/wpd-tinctures-functions.php`
+* Added tinctures to `wpd_top_sellers_metabox` filter in `admin/class-wpd-tinctures-metaboxes.php`
+* Updated widget to use the `wpd_product_image` helper function in `admin/class-wpd-tinctures-widgets.php`
+* Updated code to escape `$_POST` metabox data in `admin/class-wpd-tinctures-metaboxes.php`
+* Updated tinctures category taxonomy `show_in_rest` value to `true` in `admin/class-wpd-tinctures-taxonomies.php`
+* Updated shortcode to use `get_wpd_product_image` helper function in `admin/class-wpd-tinctures-shortcodes.php`
+* Updated product title to use `get_the_title` function in `admin/class-wpd-tinctures-shortcodes.php`
+* Updated tinctures pricing variable in `admin/class-wpd-tinctures-shortcodes.php`
+* Updated text strings for localization in `admin/class-wpd-tinctures-post-type.php`
+* WordPress Coding Standards updates in `admin/class-wpd-tinctures-shortcodes.php`
 
 = 1.6.1 =
 * Removed custom REST API codes for Gear category endpoint in `admin/class=wpd-tinctures-rest-api.php`
