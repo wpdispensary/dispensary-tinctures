@@ -99,3 +99,19 @@ function wpd_tinctures_menu_types( $menu_types ) {
 	return $menu_types;
 }
 add_filter( 'wpd_menu_types', 'wpd_tinctures_menu_types' );
+
+/**
+ * Add tinctures prices to get_wpd_all_prices_simple filter
+ * 
+ * @since 1.7
+ */
+function get_wpd_tinctures_prices_simple_filter( $str ) {
+
+	// Add tinctures prices.
+	if ( 'tinctures' == get_post_type( get_the_ID() ) ) {
+		$str .= get_wpd_tinctures_prices_simple( $id = NULL, $phrase = NULL );
+	}
+
+	return $str;
+}
+add_filter( 'get_wpd_all_prices_simple', 'get_wpd_tinctures_prices_simple_filter' );
