@@ -106,7 +106,7 @@ class wpd_tinctures_widget extends WP_Widget {
 
 				do_action( 'wpd_tinctures_widget_inside_top' );
 
-				wpd_product_image( $instance['imagesize'] );
+				wpd_product_image( $post->ID, $instance['imagesize'] );
 
 				if ( 'on' === $instance['tincturesname'] ) {
 					echo "<span class='wpdispensary-widget-title'><a href='" . esc_url( get_permalink( $post->ID ) ) . "'>" . get_the_title( $post->ID ) . "</a></span>";
