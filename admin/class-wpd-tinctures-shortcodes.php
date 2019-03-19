@@ -71,7 +71,7 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 
 		if ( 'tinctures' == get_post_type() ) {
 			if ( 'show' == $info ) {
-				$showinfo = get_wpd_tinctures_prices_simple( NULL, TRUE );
+				$showinfo = get_wpd_tinctures_prices_simple( get_the_ID(), TRUE );
 			} else {
 				$showinfo = '';
 			}
@@ -97,7 +97,7 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 			$wpd_shortcode_top_tinctures = ob_get_contents();
 		ob_end_clean();
 
-		$wpdposts .= '<div class="wpdshortcode wpd-tinctures ' . $class .'">'. $wpd_shortcode_top_tinctures .''. $wpd_shortcode_inside_top .''. get_wpd_product_image( $image_size );
+		$wpdposts .= '<div class="wpdshortcode wpd-tinctures ' . $class .'">'. $wpd_shortcode_top_tinctures . $wpd_shortcode_inside_top . get_wpd_product_image( get_the_ID(), $image_size );
 
 		ob_start();
 			do_action( 'wpd_shortcode_bottom_tinctures' );
@@ -109,7 +109,7 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 			$wpd_shortcode_inside_bottom = ob_get_contents();
 		ob_end_clean();
 
-		$wpdposts .= $showname .''. $showinfo .''. $wpd_shortcode_inside_bottom .''. $wpd_shortcode_bottom_tinctures .'</div>';
+		$wpdposts .= $showname . $showinfo . $wpd_shortcode_inside_bottom . $wpd_shortcode_bottom_tinctures .'</div>';
 
 	endwhile;
 
