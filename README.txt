@@ -45,6 +45,9 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 
 == Changelog ==
 
+= 1.7.2 =
+* Bug fix pass the ID argument to prices and image helper functions in `admin/class-wpd-tinctures-shortcodes.php`
+
 = 1.7.1 =
 * Updated the widget to pass the post ID to the `wpd_product_image` helper function in `admin/class-wpd-tinctures-widgets.php`
 
