@@ -23,6 +23,34 @@ function wpd_tinctures_featuredimage( $data, $post, $request ) {
 add_filter( 'rest_prepare_tinctures', 'wpd_tinctures_featuredimage', 10, 3 );
 
 /**
+ * Adding featured image URL's to Tinctures Custom Post Type
+ *
+ * @access public
+ *
+ * @param object  $data
+ * @param WP_Post $post    The WordPress post object.
+ * @param null    $request Unused.
+ *
+ * @return object The featured image data.
+ * @since 1.8
+ */
+function tinctures_featured_images( $data, $post, $request ) {
+	$_data                           = $data->data;
+	$thumbnail_id                    = get_post_thumbnail_id( $post->ID );
+	$wpd_default                     = wp_get_attachment_image_src( $thumbnail_id, 'dispensary-image' );
+	$wpd_small                       = wp_get_attachment_image_src( $thumbnail_id, 'wpd-small' );
+	$wpd_medium                      = wp_get_attachment_image_src( $thumbnail_id, 'wpd-medium' );
+	$wpd_large                       = wp_get_attachment_image_src( $thumbnail_id, 'wpd-large' );
+	$_data['featured_image_default'] = $wpd_default[0];
+	$_data['featured_image_small']   = $wpd_small[0];
+	$_data['featured_image_medium']  = $wpd_medium[0];
+	$_data['featured_image_large']   = $wpd_large[0];
+	$data->data                      = $_data;
+	return $data;
+}
+add_filter( 'rest_prepare_tinctures', 'tinctures_featured_images', 10, 3 );
+
+/**
  * Add 'categories' endpoint for the Tinctures Custom Post Type
  *
  * @since 1.2
