@@ -119,3 +119,15 @@ function get_wpd_tinctures_prices_simple_filter( $str ) {
 	return $str;
 }
 add_filter( 'get_wpd_all_prices_simple', 'get_wpd_tinctures_prices_simple_filter' );
+
+/**
+ * Add tinctures to the wpd_compound_details_screens filter
+ * 
+ * @since 1.9
+ */
+function wpd_tinctures_compound_details_screens( $screens ) {
+	$screens[] = 'tinctures';
+	return $screens;
+}
+add_filter( 'wpd_compound_details_screens', 'wpd_tinctures_compound_details_screens' );
+
