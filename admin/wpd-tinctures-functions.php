@@ -131,3 +131,13 @@ function wpd_tinctures_compound_details_screens( $screens ) {
 }
 add_filter( 'wpd_compound_details_screens', 'wpd_tinctures_compound_details_screens' );
 
+/**
+ * Add tinctures to the wpd_data_output_compounds_table filter
+ * 
+ * @since 1.9
+ */
+function wpd_tinctures_data_output_compounds_table( $compounds_table ) {
+	$compounds_table[] = 'tinctures';
+	return $compounds_table;
+}
+add_filter( 'wpd_data_output_compounds_table', 'wpd_tinctures_data_output_compounds_table' );
