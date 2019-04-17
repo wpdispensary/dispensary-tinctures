@@ -4,7 +4,7 @@ Donate link: https://www.wpdispensary.com
 Tags: dispensary, cannabis, marijuana, wp-dispensary, tinctures
 Requires at least: 3.0.1
 Tested up to: 5.1
-Stable tag: 1.8
+Stable tag: 1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,13 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 1.9 =
+* Added `tinctures` to compounds filter for admin screens in `admin/wpd-tinctures-functions.php`
+* Added `tinctures` to compounds filter for data output in `admin/wpd-tinctures-functions.php`
+* Updated shortcode product title wrap from p to h2 in `admin/wpd-tinctures-shortcodes.php`
+* Updated `.pot` file with text strings for localization in `languages/wpd-tinctures.pot`
+* General code cleanup throuhgout multiple files
 
 = 1.8 =
 * Added 'prices' REST API endpoint in `admin/class-wpd-tinctures-rest-api.php`

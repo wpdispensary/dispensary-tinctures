@@ -70,7 +70,7 @@ class WPD_Tinctures {
 		if ( defined( 'WPD_TINCTURES_VERSION' ) ) {
 			$this->version = WPD_TINCTURES_VERSION;
 		} else {
-			$this->version = '1.8';
+			$this->version = '1.9';
 		}
 		$this->plugin_name = 'wpd-tinctures';
 
