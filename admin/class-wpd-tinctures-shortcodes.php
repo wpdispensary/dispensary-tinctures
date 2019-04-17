@@ -64,7 +64,7 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 		/** Check shortcode options input by user */
 
 		if ( 'show' == $name ) {
-			$showname = '<p><strong><a href="' . get_permalink() . '">' . get_the_title() . '</a></strong></p>';
+			$showname = '<h2 class="wpd-producttitle"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h2>';
 		} else {
 			$showname = '';
 		}
