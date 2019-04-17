@@ -98,7 +98,7 @@ add_action( 'wpd_ecommerce_item_types_inside_after', 'wpd_tinctures_item_types' 
 function wpd_tinctures_menu_types( $menu_types ) {
 
 	// Add tinctures.
-	$menu_types['wpd-tinctures'] = __( 'Tinctures', 'wp-dispensary' );
+	$menu_types['wpd-tinctures'] = __( 'Tinctures', 'wpd-tinctures' );
 
 	return $menu_types;
 }
