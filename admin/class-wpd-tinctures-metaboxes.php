@@ -33,7 +33,6 @@ function wpd_tinctures_pricing_metaboxes() {
 	}
 
 }
-
 add_action( 'add_meta_boxes', 'wpd_tinctures_pricing_metaboxes' );
 
 /**
@@ -116,7 +115,6 @@ function wpd_tinctures_prices_save_meta( $post_id, $post ) {
 	}
 
 }
-
 add_action( 'save_post', 'wpd_tinctures_prices_save_meta', 1, 2 ); /** Save the custom fields */
 
 
@@ -143,7 +141,6 @@ function wpd_tinctures_details_metaboxes() {
 	}
 
 }
-
 add_action( 'add_meta_boxes', 'wpd_tinctures_details_metaboxes' );
 
 /**
@@ -234,7 +231,6 @@ function wpd_tinctures_details_save_meta( $post_id, $post ) {
 	}
 
 }
-
 add_action( 'save_post', 'wpd_tinctures_details_save_meta', 1, 2 ); /** Save the custom fields */
 
 /**
