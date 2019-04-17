@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Dispensary's Tinctures\n"
-"POT-Creation-Date: 2019-01-29 13:07-0500\n"
-"PO-Revision-Date: 2019-01-29 13:07-0500\n"
+"POT-Creation-Date: 2019-04-17 00:22-0400\n"
+"PO-Revision-Date: 2019-04-17 00:22-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,51 +21,51 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: admin/class-wpd-tinctures-data-output.php:51
+#: admin/class-wpd-tinctures-data-output.php:49
 msgid "Price"
 msgstr ""
 
-#: admin/class-wpd-tinctures-data-output.php:54
+#: admin/class-wpd-tinctures-data-output.php:52
 msgid "per pack"
 msgstr ""
 
-#: admin/class-wpd-tinctures-data-output.php:66
-#: admin/class-wpd-tinctures-metaboxes.php:168
+#: admin/class-wpd-tinctures-data-output.php:62
+#: admin/class-wpd-tinctures-metaboxes.php:165
 msgid "Servings"
 msgstr ""
 
-#: admin/class-wpd-tinctures-data-output.php:69
-#: admin/class-wpd-tinctures-metaboxes.php:172
+#: admin/class-wpd-tinctures-data-output.php:65
+#: admin/class-wpd-tinctures-metaboxes.php:169
 msgid "THC mg per serving"
 msgstr ""
 
-#: admin/class-wpd-tinctures-data-output.php:72
+#: admin/class-wpd-tinctures-data-output.php:68
 msgid "CBD mg per sering"
 msgstr ""
 
-#: admin/class-wpd-tinctures-data-output.php:75
-#: admin/class-wpd-tinctures-metaboxes.php:180
+#: admin/class-wpd-tinctures-data-output.php:71
+#: admin/class-wpd-tinctures-metaboxes.php:177
 msgid "mL per serving"
 msgstr ""
 
-#: admin/class-wpd-tinctures-data-output.php:78
+#: admin/class-wpd-tinctures-data-output.php:74
 msgid "Net weight"
 msgstr ""
 
-#: admin/class-wpd-tinctures-data-output.php:81
-#: admin/class-wpd-tinctures-taxonomies.php:40
+#: admin/class-wpd-tinctures-data-output.php:77
+#: admin/class-wpd-tinctures-taxonomies.php:34
 msgid "Categories"
 msgstr ""
 
-#: admin/class-wpd-tinctures-data-output.php:93
+#: admin/class-wpd-tinctures-data-output.php:88
 msgid "Ingredients"
 msgstr ""
 
-#: admin/class-wpd-tinctures-data-output.php:105
+#: admin/class-wpd-tinctures-data-output.php:99
 msgid "Allergens"
 msgstr ""
 
-#: admin/class-wpd-tinctures-data-output.php:117
+#: admin/class-wpd-tinctures-data-output.php:110
 msgid "Vendors"
 msgstr ""
 
@@ -73,27 +73,27 @@ msgstr ""
 msgid "Product Pricing"
 msgstr ""
 
-#: admin/class-wpd-tinctures-metaboxes.php:56
+#: admin/class-wpd-tinctures-metaboxes.php:55
 msgid "Price per unit"
 msgstr ""
 
-#: admin/class-wpd-tinctures-metaboxes.php:62
+#: admin/class-wpd-tinctures-metaboxes.php:61
 msgid "Price per pack"
 msgstr ""
 
-#: admin/class-wpd-tinctures-metaboxes.php:68
+#: admin/class-wpd-tinctures-metaboxes.php:67
 msgid "Units per pack"
 msgstr ""
 
-#: admin/class-wpd-tinctures-metaboxes.php:137
+#: admin/class-wpd-tinctures-metaboxes.php:135
 msgid "Tincture Details"
 msgstr ""
 
-#: admin/class-wpd-tinctures-metaboxes.php:176
+#: admin/class-wpd-tinctures-metaboxes.php:173
 msgid "CBD mg per serving"
 msgstr ""
 
-#: admin/class-wpd-tinctures-metaboxes.php:184
+#: admin/class-wpd-tinctures-metaboxes.php:181
 msgid "Net weight (ounces)"
 msgstr ""
 
@@ -267,55 +267,49 @@ msgstr ""
 msgid "Tinctures Base"
 msgstr ""
 
-#: admin/class-wpd-tinctures-shortcodes.php:107
-#: admin/class-wpd-tinctures-shortcodes.php:109
-#: admin/class-wpd-tinctures-shortcodes.php:113
-msgid "Menu"
-msgstr ""
-
-#: admin/class-wpd-tinctures-taxonomies.php:29
+#: admin/class-wpd-tinctures-taxonomies.php:23
 msgctxt "taxonomy general name"
 msgid "Categories"
 msgstr ""
 
-#: admin/class-wpd-tinctures-taxonomies.php:30
+#: admin/class-wpd-tinctures-taxonomies.php:24
 msgctxt "taxonomy singular name"
 msgid "Category"
 msgstr ""
 
-#: admin/class-wpd-tinctures-taxonomies.php:31
+#: admin/class-wpd-tinctures-taxonomies.php:25
 msgid "Search Categories"
 msgstr ""
 
-#: admin/class-wpd-tinctures-taxonomies.php:32
+#: admin/class-wpd-tinctures-taxonomies.php:26
 msgid "All Categories"
 msgstr ""
 
-#: admin/class-wpd-tinctures-taxonomies.php:33
+#: admin/class-wpd-tinctures-taxonomies.php:27
 msgid "Parent Category"
 msgstr ""
 
-#: admin/class-wpd-tinctures-taxonomies.php:34
+#: admin/class-wpd-tinctures-taxonomies.php:28
 msgid "Parent Category:"
 msgstr ""
 
-#: admin/class-wpd-tinctures-taxonomies.php:35
+#: admin/class-wpd-tinctures-taxonomies.php:29
 msgid "Edit Category"
 msgstr ""
 
-#: admin/class-wpd-tinctures-taxonomies.php:36
+#: admin/class-wpd-tinctures-taxonomies.php:30
 msgid "Update Category"
 msgstr ""
 
-#: admin/class-wpd-tinctures-taxonomies.php:37
+#: admin/class-wpd-tinctures-taxonomies.php:31
 msgid "Add New Category"
 msgstr ""
 
-#: admin/class-wpd-tinctures-taxonomies.php:38
+#: admin/class-wpd-tinctures-taxonomies.php:32
 msgid "New Category Name"
 msgstr ""
 
-#: admin/class-wpd-tinctures-taxonomies.php:39
+#: admin/class-wpd-tinctures-taxonomies.php:33
 msgid "No categories found"
 msgstr ""
 
@@ -327,29 +321,33 @@ msgstr ""
 msgid "Your most recent "
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:204
+#: admin/class-wpd-tinctures-widgets.php:207
 msgid "Widget Title:"
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:209
+#: admin/class-wpd-tinctures-widgets.php:212
 msgid "Amount of "
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:215
+#: admin/class-wpd-tinctures-widgets.php:218
 msgid "Randomize output?"
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:220
-#: admin/class-wpd-tinctures-widgets.php:225
+#: admin/class-wpd-tinctures-widgets.php:223
+#: admin/class-wpd-tinctures-widgets.php:228
 msgid "Display "
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:230
+#: admin/class-wpd-tinctures-widgets.php:233
 msgid "Display featured image?"
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:234
+#: admin/class-wpd-tinctures-widgets.php:237
 msgid "Image size:"
+msgstr ""
+
+#: admin/wpd-tinctures-functions.php:101
+msgid "Tinctures"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
@@ -363,8 +361,8 @@ msgstr ""
 #. Description of the plugin/theme
 msgid ""
 "This plugin adds a Tinctures menu type to the WP Dispensary menu plugin. "
-"Brought to you by <a href=\"http://www.deviodigital.com/\">Devio Digital</a> "
-"&amp; <a href=\"https://www.wpdispensary.com\">WP Dispensary</a>."
+"Brought to you by <a href=\"https://www.deviodigital.com/\">Devio Digital</"
+"a> &amp; <a href=\"https://www.wpdispensary.com\">WP Dispensary</a>."
 msgstr ""
 
 #. Author of the plugin/theme
