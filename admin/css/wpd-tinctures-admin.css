@@ -29,6 +29,11 @@
 	width: 18%;
 }
 
+@media screen and (max-width: 767px) {
+	#postbox-container-2 #wpd_tinctures_details .inside .tincturesdetailsbox {
+		width: 48%;
+	}
+}
 
 /* Widget styles
 -------------------------------------------------------------- */
