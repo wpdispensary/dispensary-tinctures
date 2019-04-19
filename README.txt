@@ -49,6 +49,7 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 * Added `tinctures` to compounds filter for admin screens in `admin/wpd-tinctures-functions.php`
 * Added `tinctures` to compounds filter for data output in `admin/wpd-tinctures-functions.php`
 * Updated shortcode product title wrap from p to h2 in `admin/wpd-tinctures-shortcodes.php`
+* Updated mobile width for tinctures details metabox in `admin/css/wpd-tinctures-admin.css`
 * Updated `.pot` file with text strings for localization in `languages/wpd-tinctures.pot`
 * General code cleanup throuhgout multiple files
 
