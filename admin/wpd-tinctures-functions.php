@@ -86,7 +86,7 @@ function wpd_tinctures_item_types() {
 	$product_id = get_the_ID();
 
 	// Display Tinctures Category.
-	echo "<span class='wpd-ecommerce category tinctures'>" . get_the_term_list( $product_id, 'wpd_tinctures_category', '', ', ' ) . "</span>";
+	echo "<span class='wpd-ecommerce category tinctures'>" . get_the_term_list( $product_id, 'wpd_tinctures_category', '', ' ' ) . "</span>";
 }
 add_action( 'wpd_ecommerce_item_types_inside_after', 'wpd_tinctures_item_types' );
 
