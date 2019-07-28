@@ -15,10 +15,10 @@
  *
  * @since	   1.0.0
  */
-if ( ! function_exists( 'wpdispensary_tinctures' ) ) {
+if ( ! function_exists( 'wp_dispensary_tinctures' ) ) {
 
 /** Register Custom Post Type */
-function wpdispensary_tinctures() {
+function wp_dispensary_tinctures() {
 
 	// Get permalink base for Tinctures.
 	$wpd_tinctures_slug = get_option( 'wpd_tinctures_slug' );
@@ -93,7 +93,7 @@ function wpdispensary_tinctures() {
 	register_post_type( 'tinctures', $args );
 
 }
-add_action( 'init', 'wpdispensary_tinctures', 0 );
+add_action( 'init', 'wp_dispensary_tinctures', 0 );
 
 }
 

@@ -17,7 +17,7 @@
  *
  * @since    1.0.0
  */
-function wpdispensary_tincturescategory() {
+function wp_dispensary_tinctures_category() {
 
 	$labels = array(
 		'name'              => _x( 'Categories', 'taxonomy general name', 'wpd-tinctures' ),
@@ -49,7 +49,7 @@ function wpdispensary_tincturescategory() {
 	) );
 
 }
-add_action( 'init', 'wpdispensary_tincturescategory', 0 );
+add_action( 'init', 'wp_dispensary_tinctures_category', 0 );
 
 /**
  * Function to add ingredients taxonomy to "Tinctures" menu type
