@@ -92,7 +92,6 @@ function wpd_tinctures_prices_save_meta( $post_id, $post ) {
 	 * OK, we're authenticated: we need to find and save the data
 	 * We'll put it into an array to make it easier to loop though.
 	 */
-
 	$prices_meta['_priceeach']    = esc_html( $_POST['_priceeach'] );
 	$prices_meta['_priceperpack'] = esc_html( $_POST['_priceperpack'] );
 	$prices_meta['_unitsperpack'] = esc_html( $_POST['_unitsperpack'] );
@@ -206,7 +205,6 @@ function wpd_tinctures_details_save_meta( $post_id, $post ) {
 	 * OK, we're authenticated: we need to find and save the data
 	 * We'll put it into an array to make it easier to loop though.
 	 */
-
 	$details_meta['_thcmg']          = esc_html( $_POST['_thcmg'] );
 	$details_meta['_cbdmg']          = esc_html( $_POST['_cbdmg'] );
 	$details_meta['_mlserving']      = esc_html( $_POST['_mlserving'] );

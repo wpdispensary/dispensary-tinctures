@@ -140,12 +140,6 @@ add_filter( 'rest_prepare_tinctures', 'wpd_tinctures_allergens_tax', 10, 3 );
  *
  * @since    1.1.0
  */
-
-add_action( 'rest_api_init', 'slug_register_wpd_tinctures_prices' );
-
-/**
- * Registering Prices
- */
 function slug_register_wpd_tinctures_prices() {
 	$productsizes = array( '_priceeach', '_priceperpack', '_unitsperpack' );
 	foreach ( $productsizes as $size ) {
@@ -160,6 +154,7 @@ function slug_register_wpd_tinctures_prices() {
 		);
 	} /** /foreach */
 }
+add_action( 'rest_api_init', 'slug_register_wpd_tinctures_prices' );
 
 /**
  * Get Prices

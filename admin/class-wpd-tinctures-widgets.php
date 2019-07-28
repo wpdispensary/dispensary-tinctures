@@ -121,11 +121,11 @@ class wpd_tinctures_widget extends WP_Widget {
 
 			} else {
 
-				echo '<li>';
 				if ( 'on' === $instance['tincturesname'] ) {
-					echo "<a href='" . esc_url( get_permalink( $post->ID ) ) . "' class='wpdispensary-widget-link'>" . get_the_title( $post->ID ) . "</a>";
+					echo '<li>';
+					echo '<a href="' . esc_url( get_permalink( $post->ID ) ) . '" class="wpdispensary-widget-link">' . get_the_title( $post->ID ) . '</a>';
+					echo '</li>';
 				}
-				echo '</li>';
 
 			}
 

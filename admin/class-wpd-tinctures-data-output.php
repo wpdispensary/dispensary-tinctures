@@ -52,7 +52,7 @@ function add_wpd_tinctures_price_data() {
 			<tr class="priceeach"><td><span><?php echo get_post_meta( get_the_ID(), '_unitsperpack', true ); ?> <?php echo __( 'per pack', 'wpd-tinctures' ); ?></span></td><td><?php echo wpd_currency_code(); ?><?php echo get_post_meta( get_the_ID(), '_priceperpack', true ); ?></td></tr>
 		<?php } ?>
 	<?php }
-} // function
+}
 add_action( 'wpd_pricingoutput_bottom', 'add_wpd_tinctures_price_data', 10 );
 
 /** Tinctures Details Output */

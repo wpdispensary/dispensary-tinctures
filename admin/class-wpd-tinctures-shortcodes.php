@@ -116,6 +116,5 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 	wp_reset_postdata();
 
 	return $wpdposts . '</div>';
-
 }
 add_shortcode( 'wpd-tinctures', 'wpdispensary_tinctures_shortcode' );
