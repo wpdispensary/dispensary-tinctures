@@ -65,7 +65,7 @@ function wpd_tinctures_details_data() {
 			<tr><td><span><?php echo __( 'THC mg per serving', 'wpd-tinctures' ); ?></span></td><td><?php echo get_post_meta( get_the_id(), '_thcmg', true ); ?></td></tr>
 		<?php } ?>
 		<?php if ( ! get_post_meta( get_the_ID(), '_cbdmg', true ) ) { } else { ?>
-			<tr><td><span><?php echo __( 'CBD mg per sering', 'wpd-tinctures' ); ?></span></td><td><?php echo get_post_meta( get_the_id(), '_cbdmg', true ); ?></td></tr>
+			<tr><td><span><?php echo __( 'CBD mg per serving', 'wpd-tinctures' ); ?></span></td><td><?php echo get_post_meta( get_the_id(), '_cbdmg', true ); ?></td></tr>
 		<?php } ?>
 		<?php if ( ! get_post_meta( get_the_ID(), '_mlserving', true ) ) { } else { ?>
 			<tr><td><span><?php echo __( 'mL per serving', 'wpd-tinctures' ); ?></span></td><td><?php echo get_post_meta( get_the_id(), '_mlserving', true ); ?></td></tr>
