@@ -27,18 +27,30 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 	/* Attributes */
 	extract( shortcode_atts(
 		array(
-			'posts'   => '100',
-			'class'   => '',
-			'name'    => 'show',
-			'info'    => 'show',
-			'title'   => $wpd_tinctures_slug_cap,
-			'image'   => 'show',
-			'imgsize' => 'dispensary-image',
-			'viewall' => '',
+			'posts'    => '100',
+			'class'    => '',
+			'name'     => 'show',
+			'info'     => 'show',
+			'title'    => $wpd_tinctures_slug_cap,
+			'image'    => 'show',
+			'imgsize'  => 'dispensary-image',
+			'orderby'  => '',
+			'meta_key' => '',
+			'viewall'  => '',
 		),
 		$atts,
 		'wpd_tinctures'
 	) );
+
+	// Variables.
+	$order    = '';
+	$ordernew = '';
+
+	// Order by.
+	if ( '' !== $orderby ) {
+		$order    = $orderby;
+		$ordernew = 'ASC';
+	}
 
 	/**
 	 * Code to create shortcode for Dispensary Tinctures
@@ -47,6 +59,9 @@ function wpdispensary_tinctures_shortcode( $atts ) {
 		array(
 			'post_type'      => 'tinctures',
 			'posts_per_page' => $posts,
+			'orderby'        => $order,
+			'order'          => $ordernew,
+			'meta_key'       => $meta_key,
 		)
 	);
 
