@@ -1,10 +1,10 @@
 === Dispensary Tinctures ===
 Contributors: wpdispensary, deviodigital
 Donate link: https://www.wpdispensary.com
-Tags: dispensary, cannabis, marijuana, wp-dispensary, tinctures
+Tags: dispensary, cannabis, marijuana, CBD, tinctures, wp-dispensary
 Requires at least: 3.0.1
-Tested up to: 5.1
-Stable tag: 1.9
+Tested up to: 5.2.2
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,15 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 2.0 =
+* Added `orderby` and `meta_key` shortcode attributes in `admin/class-wpd-tinctures-shortcodes.php`
+* Bug fix misspelling for CBD mg per serving in `admin/class-wpd-tinctures-data-output.php`
+* Updated eCommerce display to remove comma between categories in `admin/wpd-tinctures-functions.php`
+* Updated select options for featured image sizes in widgets in `admin/class-wpd-tinctures-widgets.php`
+* Updated function names in `admin/class-wpd-tinctures-post-type.php` and `admin/class-wpd-tinctures-taxonomies.php`
+* Updated `.pot` file with text strings for localization in `languages/wpd-tinctures.pot`
+* General code cleanup throughout multiple files
 
 = 1.9 =
 * Added `tinctures` to compounds filter for admin screens in `admin/wpd-tinctures-functions.php`
