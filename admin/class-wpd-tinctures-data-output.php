@@ -46,10 +46,10 @@ add_filter( 'wpd_pricing_table_placement_array', 'wpd_tinctures_priceoutput' );
 function add_wpd_tinctures_price_data() {
 	if ( in_array( get_post_type(), array( 'tinctures' ) ) ) { ?>
 		<?php if ( ! get_post_meta( get_the_ID(), '_priceeach', true ) ) { } else { ?>
-			<tr class="priceeach"><td><span><?php echo __( 'Price', 'wpd-tinctures' ); ?></span></td><td><?php echo wpd_currency_code(); ?><?php echo get_post_meta( get_the_ID(), '_priceeach', true ); ?></td></tr>
+			<tr class="priceeach"><td><span><?php esc_attr_e( 'Price', 'wpd-tinctures' ); ?></span></td><td><?php echo wpd_currency_code(); ?><?php echo get_post_meta( get_the_ID(), '_priceeach', true ); ?></td></tr>
 		<?php } ?>
 		<?php if ( ! get_post_meta( get_the_ID(), '_priceperpack', true ) ) { } else { ?>
-			<tr class="priceeach"><td><span><?php echo get_post_meta( get_the_ID(), '_unitsperpack', true ); ?> <?php echo __( 'per pack', 'wpd-tinctures' ); ?></span></td><td><?php echo wpd_currency_code(); ?><?php echo get_post_meta( get_the_ID(), '_priceperpack', true ); ?></td></tr>
+			<tr class="priceeach"><td><span><?php esc_attr_e( get_post_meta( get_the_ID(), '_unitsperpack', true ) ); ?> <?php esc_attr_e( 'per pack', 'wpd-tinctures' ); ?></span></td><td><?php echo wpd_currency_code(); ?><?php echo get_post_meta( get_the_ID(), '_priceperpack', true ); ?></td></tr>
 		<?php } ?>
 	<?php }
 }
@@ -59,22 +59,22 @@ add_action( 'wpd_pricingoutput_bottom', 'add_wpd_tinctures_price_data', 10 );
 function wpd_tinctures_details_data() {
 	if ( in_array( get_post_type(), array( 'tinctures' ) ) ) { ?>
 		<?php if ( ! get_post_meta( get_the_ID(), '_thccbdservings', true ) ) { } else { ?>
-			<tr><td><span><?php echo __( 'Servings', 'wpd-tinctures' ); ?></span></td><td><?php echo get_post_meta( get_the_id(), '_thccbdservings', true ); ?></td></tr>
+			<tr><td><span><?php esc_attr_e( 'Servings', 'wpd-tinctures' ); ?></span></td><td><?php echo get_post_meta( get_the_id(), '_thccbdservings', true ); ?></td></tr>
 		<?php } ?>
 		<?php if ( ! get_post_meta( get_the_ID(), '_thcmg', true ) ) { } else { ?>
-			<tr><td><span><?php echo __( 'THC mg per serving', 'wpd-tinctures' ); ?></span></td><td><?php echo get_post_meta( get_the_id(), '_thcmg', true ); ?></td></tr>
+			<tr><td><span><?php esc_attr_e( 'THC mg per serving', 'wpd-tinctures' ); ?></span></td><td><?php echo get_post_meta( get_the_id(), '_thcmg', true ); ?></td></tr>
 		<?php } ?>
 		<?php if ( ! get_post_meta( get_the_ID(), '_cbdmg', true ) ) { } else { ?>
-			<tr><td><span><?php echo __( 'CBD mg per serving', 'wpd-tinctures' ); ?></span></td><td><?php echo get_post_meta( get_the_id(), '_cbdmg', true ); ?></td></tr>
+			<tr><td><span><?php esc_attr_e( 'CBD mg per serving', 'wpd-tinctures' ); ?></span></td><td><?php echo get_post_meta( get_the_id(), '_cbdmg', true ); ?></td></tr>
 		<?php } ?>
 		<?php if ( ! get_post_meta( get_the_ID(), '_mlserving', true ) ) { } else { ?>
-			<tr><td><span><?php echo __( 'mL per serving', 'wpd-tinctures' ); ?></span></td><td><?php echo get_post_meta( get_the_id(), '_mlserving', true ); ?></td></tr>
+			<tr><td><span><?php esc_attr_e( 'mL per serving', 'wpd-tinctures' ); ?></span></td><td><?php echo get_post_meta( get_the_id(), '_mlserving', true ); ?></td></tr>
 		<?php } ?>
 		<?php if ( ! get_post_meta( get_the_ID(), '_netweight', true ) ) { } else { ?>
-			<tr><td><span><?php echo __( 'Net weight', 'wpd-tinctures' ); ?></span></td><td><?php echo get_post_meta( get_the_id(), '_netweight', true ); ?> oz</td></tr>
+			<tr><td><span><?php esc_attr_e( 'Net weight', 'wpd-tinctures' ); ?></span></td><td><?php echo get_post_meta( get_the_id(), '_netweight', true ); ?> oz</td></tr>
 		<?php } ?>
 		<?php if ( ! get_the_term_list( get_the_ID(), 'wpd_tinctures_category', true ) ) { } else { ?>
-			<tr><td><span><?php echo __( 'Categories', 'wpd-tinctures' ); ?></span></td><td><?php echo get_the_term_list( get_the_id(), 'wpd_tinctures_category', '', ', ' ); ?></td></tr>
+			<tr><td><span><?php esc_attr_e( 'Categories', 'wpd-tinctures' ); ?></span></td><td><?php echo get_the_term_list( get_the_id(), 'wpd_tinctures_category', '', ', ' ); ?></td></tr>
 		<?php } ?>
 	<?php } // if in_array
 }
@@ -85,7 +85,7 @@ function wpd_tinctures_ingredients_data() {
 	global $post;
 	if ( in_array( get_post_type(), array( 'tinctures' ) ) ) { ?>
 		<?php if ( ! get_the_term_list( get_the_ID(), 'ingredients', true ) ) { } else { ?>
-		<tr><td><span><?php echo __( 'Ingredients', 'wpd-tinctures' ); ?></span></td><td><?php echo get_the_term_list( $post->ID, 'ingredients', '', ', ' ); ?></td></tr>
+		<tr><td><span><?php esc_attr_e( 'Ingredients', 'wpd-tinctures' ); ?></span></td><td><?php echo get_the_term_list( $post->ID, 'ingredients', '', ', ' ); ?></td></tr>
 		<?php } ?>
 	<?php }
 }
@@ -96,7 +96,7 @@ function wpd_tinctures_allergens_data() {
 	global $post;
 	if ( in_array( get_post_type(), array( 'tinctures' ) ) ) { ?>
 		<?php if ( ! get_the_term_list( get_the_ID(), 'allergens', true ) ) { } else { ?>
-		<tr><td><span><?php echo __( 'Allergens', 'wpd-tinctures' ); ?></span></td><td><?php echo get_the_term_list( $post->ID, 'allergens', '', ', ' ); ?></td></tr>
+		<tr><td><span><?php esc_attr_e( 'Allergens', 'wpd-tinctures' ); ?></span></td><td><?php echo get_the_term_list( $post->ID, 'allergens', '', ', ' ); ?></td></tr>
 		<?php } ?>
 	<?php }
 }
@@ -107,7 +107,7 @@ function wpd_tinctures_vendor_data() {
 	global $post;
 	if ( in_array( get_post_type(), array( 'tinctures' ) ) ) { ?>
 		<?php if ( ! get_the_term_list( get_the_ID(), 'vendor', true ) ) { } else { ?>
-		<tr><td><span><?php echo __( 'Vendors', 'wpd-tinctures' ); ?></span></td><td><?php echo get_the_term_list( $post->ID, 'vendor', '', ', ' ); ?></td></tr>
+		<tr><td><span><?php esc_attr_e( 'Vendors', 'wpd-tinctures' ); ?></span></td><td><?php echo get_the_term_list( $post->ID, 'vendor', '', ', ' ); ?></td></tr>
 		<?php } ?>
 	<?php }
 }
