@@ -30,8 +30,8 @@ class WPD_Tinctures_Activator {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
-		wpdispensary_tinctures();
-		wpdispensary_tincturescategory();
+		wp_dispensary_tinctures();
+		wp_dispensary_tinctures_category();
 
 		/**
 		 * Flush Rewrite Rules
