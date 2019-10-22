@@ -76,10 +76,10 @@ class wpd_tinctures_widget extends WP_Widget {
 			echo "<ul class='wpdispensary-list'>";
 		}
 
+		$randorder = '';
+
 		if ( 'on' === $instance['order'] ) {
 			$randorder = 'rand';
-		} else {
-			$randorder = '';
 		}
 
 		global $post;

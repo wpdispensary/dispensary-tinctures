@@ -22,16 +22,16 @@ function wp_dispensary_tinctures_category() {
 	$labels = array(
 		'name'              => _x( 'Categories', 'taxonomy general name', 'wpd-tinctures' ),
 		'singular_name'     => _x( 'Category', 'taxonomy singular name', 'wpd-tinctures' ),
-		'search_items'      => __( 'Search Categories', 'wpd-tinctures' ),
-		'all_items'         => __( 'All Categories', 'wpd-tinctures' ),
-		'parent_item'       => __( 'Parent Category', 'wpd-tinctures' ),
-		'parent_item_colon' => __( 'Parent Category:', 'wpd-tinctures' ),
-		'edit_item'         => __( 'Edit Category', 'wpd-tinctures' ),
-		'update_item'       => __( 'Update Category', 'wpd-tinctures' ),
-		'add_new_item'      => __( 'Add New Category', 'wpd-tinctures' ),
-		'new_item_name'     => __( 'New Category Name', 'wpd-tinctures' ),
-		'not_found'         => __( 'No categories found', 'wpd-tinctures' ),
-		'menu_name'         => __( 'Categories', 'wpd-tinctures' ),
+		'search_items'      => esc_html__( 'Search Categories', 'wpd-tinctures' ),
+		'all_items'         => esc_html__( 'All Categories', 'wpd-tinctures' ),
+		'parent_item'       => esc_html__( 'Parent Category', 'wpd-tinctures' ),
+		'parent_item_colon' => esc_html__( 'Parent Category:', 'wpd-tinctures' ),
+		'edit_item'         => esc_html__( 'Edit Category', 'wpd-tinctures' ),
+		'update_item'       => esc_html__( 'Update Category', 'wpd-tinctures' ),
+		'add_new_item'      => esc_html__( 'Add New Category', 'wpd-tinctures' ),
+		'new_item_name'     => esc_html__( 'New Category Name', 'wpd-tinctures' ),
+		'not_found'         => esc_html__( 'No categories found', 'wpd-tinctures' ),
+		'menu_name'         => esc_html__( 'Categories', 'wpd-tinctures' ),
 	);
 
 	register_taxonomy( 'wpd_tinctures_category', 'tinctures', array(
