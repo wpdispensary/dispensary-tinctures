@@ -111,6 +111,7 @@ class wpd_tinctures_widget extends WP_Widget {
 				if ( 'on' === $instance['tincturesname'] ) {
 					echo "<span class='wpdispensary-widget-title'><a href='" . esc_url( get_permalink( $post->ID ) ) . "'>" . get_the_title( $post->ID ) . "</a></span>";
 				}
+
 				if ( 'on' === $instance['tincturescategory'] ) {
 					echo "<span class='wpdispensary-widget-categories'>" . get_the_term_list( $post->ID, 'wpd_tinctures_category' ) . "</a></span>";
 				}
@@ -236,7 +237,7 @@ class wpd_tinctures_widget extends WP_Widget {
 	<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'imagesize' ) ); ?>"><?php esc_html_e( 'Image size:', 'wpd-tinctures' ); ?></label>
 		<?php
-			$terms = apply_filters( 'wpd_widgets_featured_image_sizes', array( 'wpdispensary-widget', 'dispensary-image', 'wpd-small', 'wpd-medium', 'wpd-large' ) );
+			$terms = apply_filters( 'wpd_widgets_featured_image_sizes', array( 'wpdispensary-widget', 'dispensary-image', 'wpd-thumbnail', 'wpd-small', 'wpd-medium', 'wpd-large' ) );
 			if ( $terms ) {
 				printf( '<select name="%s" id="' . esc_html( $this->get_field_id( 'imagesize' ) ) . '" name="' . esc_html( $this->get_field_name( 'imagesize' ) ) . '" class="widefat">', esc_attr( $this->get_field_name( 'imagesize' ) ) );
 				foreach ( $terms as $term ) {
