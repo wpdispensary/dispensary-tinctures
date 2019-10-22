@@ -35,17 +35,19 @@ add_filter( 'rest_prepare_tinctures', 'wpd_tinctures_featuredimage', 10, 3 );
  * @since 1.8
  */
 function tinctures_featured_images( $data, $post, $request ) {
-	$_data                           = $data->data;
-	$thumbnail_id                    = get_post_thumbnail_id( $post->ID );
-	$wpd_default                     = wp_get_attachment_image_src( $thumbnail_id, 'dispensary-image' );
-	$wpd_small                       = wp_get_attachment_image_src( $thumbnail_id, 'wpd-small' );
-	$wpd_medium                      = wp_get_attachment_image_src( $thumbnail_id, 'wpd-medium' );
-	$wpd_large                       = wp_get_attachment_image_src( $thumbnail_id, 'wpd-large' );
-	$_data['featured_image_default'] = $wpd_default[0];
-	$_data['featured_image_small']   = $wpd_small[0];
-	$_data['featured_image_medium']  = $wpd_medium[0];
-	$_data['featured_image_large']   = $wpd_large[0];
-	$data->data                      = $_data;
+	$_data                             = $data->data;
+	$thumbnail_id                      = get_post_thumbnail_id( $post->ID );
+	$wpd_default                       = wp_get_attachment_image_src( $thumbnail_id, 'dispensary-image' );
+	$wpd_thumbnail                     = wp_get_attachment_image_src( $thumbnail_id, 'wpd-thumbnail' );
+	$wpd_small                         = wp_get_attachment_image_src( $thumbnail_id, 'wpd-small' );
+	$wpd_medium                        = wp_get_attachment_image_src( $thumbnail_id, 'wpd-medium' );
+	$wpd_large                         = wp_get_attachment_image_src( $thumbnail_id, 'wpd-large' );
+	$_data['featured_image_default']   = $wpd_default[0];
+	$_data['featured_image_thumbnail'] = $wpd_thumbnail[0];
+	$_data['featured_image_small']     = $wpd_small[0];
+	$_data['featured_image_medium']    = $wpd_medium[0];
+	$_data['featured_image_large']     = $wpd_large[0];
+	$data->data                        = $_data;
 	return $data;
 }
 add_filter( 'rest_prepare_tinctures', 'tinctures_featured_images', 10, 3 );
