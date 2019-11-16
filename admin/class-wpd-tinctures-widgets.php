@@ -40,7 +40,7 @@ class wpd_tinctures_widget extends WP_Widget {
 			'wpd_tinctures_widget',
 			__( 'WPD ' . $wpd_tinctures_slug_cap, 'wpd-tinctures' ),
 			array(
-				'description' => __( 'Your most recent ' . $wpd_tinctures_slug, 'wpd-tinctures' ),
+				'description' => __( 'Your most recent ' . $wpd_tinctures_slug_cap, 'wpd-tinctures' ),
 				'classname'   => 'wp-dispensary-widget',
 			)
 		);
