@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Dispensary's Tinctures\n"
-"POT-Creation-Date: 2019-04-17 00:22-0400\n"
-"PO-Revision-Date: 2019-04-17 00:22-0400\n"
+"POT-Creation-Date: 2019-11-26 17:16-0500\n"
+"PO-Revision-Date: 2019-11-26 17:15-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -30,21 +30,22 @@ msgid "per pack"
 msgstr ""
 
 #: admin/class-wpd-tinctures-data-output.php:62
-#: admin/class-wpd-tinctures-metaboxes.php:165
+#: admin/class-wpd-tinctures-metaboxes.php:164
 msgid "Servings"
 msgstr ""
 
 #: admin/class-wpd-tinctures-data-output.php:65
-#: admin/class-wpd-tinctures-metaboxes.php:169
+#: admin/class-wpd-tinctures-metaboxes.php:168
 msgid "THC mg per serving"
 msgstr ""
 
 #: admin/class-wpd-tinctures-data-output.php:68
-msgid "CBD mg per sering"
+#: admin/class-wpd-tinctures-metaboxes.php:172
+msgid "CBD mg per serving"
 msgstr ""
 
 #: admin/class-wpd-tinctures-data-output.php:71
-#: admin/class-wpd-tinctures-metaboxes.php:177
+#: admin/class-wpd-tinctures-metaboxes.php:176
 msgid "mL per serving"
 msgstr ""
 
@@ -85,15 +86,11 @@ msgstr ""
 msgid "Units per pack"
 msgstr ""
 
-#: admin/class-wpd-tinctures-metaboxes.php:135
+#: admin/class-wpd-tinctures-metaboxes.php:134
 msgid "Tincture Details"
 msgstr ""
 
-#: admin/class-wpd-tinctures-metaboxes.php:173
-msgid "CBD mg per serving"
-msgstr ""
-
-#: admin/class-wpd-tinctures-metaboxes.php:181
+#: admin/class-wpd-tinctures-metaboxes.php:180
 msgid "Net weight (ounces)"
 msgstr ""
 
@@ -314,35 +311,35 @@ msgid "No categories found"
 msgstr ""
 
 #: admin/class-wpd-tinctures-widgets.php:41
-msgid "Dispensary "
+msgid "WPD "
 msgstr ""
 
 #: admin/class-wpd-tinctures-widgets.php:43
 msgid "Your most recent "
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:207
+#: admin/class-wpd-tinctures-widgets.php:208
 msgid "Widget Title:"
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:212
+#: admin/class-wpd-tinctures-widgets.php:213
 msgid "Amount of "
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:218
+#: admin/class-wpd-tinctures-widgets.php:219
 msgid "Randomize output?"
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:223
-#: admin/class-wpd-tinctures-widgets.php:228
+#: admin/class-wpd-tinctures-widgets.php:224
+#: admin/class-wpd-tinctures-widgets.php:229
 msgid "Display "
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:233
+#: admin/class-wpd-tinctures-widgets.php:234
 msgid "Display featured image?"
 msgstr ""
 
-#: admin/class-wpd-tinctures-widgets.php:237
+#: admin/class-wpd-tinctures-widgets.php:238
 msgid "Image size:"
 msgstr ""
 
