@@ -67,11 +67,12 @@ class WPD_Tinctures {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		$this->version = '2.0.1';
+		$this->plugin_name = 'wpd-tinctures';
+		$this->version     = '2.0.2';
+
 		if ( defined( 'WPD_TINCTURES_VERSION' ) ) {
 			$this->version = WPD_TINCTURES_VERSION;
 		}
-		$this->plugin_name = 'wpd-tinctures';
 
 		$this->load_dependencies();
 		$this->set_locale();
