@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Dispensary's Tinctures\n"
-"POT-Creation-Date: 2019-11-26 17:16-0500\n"
-"PO-Revision-Date: 2019-11-26 17:15-0500\n"
+"POT-Creation-Date: 2020-01-16 22:32-0500\n"
+"PO-Revision-Date: 2020-01-16 22:32-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -206,56 +206,56 @@ msgstr ""
 msgid "Display the %s from your menu"
 msgstr ""
 
-#: admin/class-wpd-tinctures-post-type.php:148
+#: admin/class-wpd-tinctures-post-type.php:153
 #, php-format
 msgid "%s updated. <a href=\"%s\">View %s</a>"
 msgstr ""
 
-#: admin/class-wpd-tinctures-post-type.php:149
+#: admin/class-wpd-tinctures-post-type.php:154
 msgid "Custom field updated."
 msgstr ""
 
-#: admin/class-wpd-tinctures-post-type.php:150
+#: admin/class-wpd-tinctures-post-type.php:155
 msgid "Custom field deleted."
 msgstr ""
 
-#: admin/class-wpd-tinctures-post-type.php:151
+#: admin/class-wpd-tinctures-post-type.php:156
 #, php-format
 msgid "%s updated."
 msgstr ""
 
-#: admin/class-wpd-tinctures-post-type.php:152
+#: admin/class-wpd-tinctures-post-type.php:157
 #, php-format
 msgid "%s restored to revision from %s"
 msgstr ""
 
-#: admin/class-wpd-tinctures-post-type.php:153
+#: admin/class-wpd-tinctures-post-type.php:158
 #, php-format
 msgid "%s published. <a href=\"%s\">View %s</a>"
 msgstr ""
 
-#: admin/class-wpd-tinctures-post-type.php:154
+#: admin/class-wpd-tinctures-post-type.php:159
 #, php-format
 msgid "%s saved."
 msgstr ""
 
-#: admin/class-wpd-tinctures-post-type.php:155
+#: admin/class-wpd-tinctures-post-type.php:160
 #, php-format
 msgid "%s submitted. <a target=\"_blank\" href=\"%s\">Preview %s</a>"
 msgstr ""
 
-#: admin/class-wpd-tinctures-post-type.php:156
+#: admin/class-wpd-tinctures-post-type.php:161
 #, php-format
 msgid ""
 "%s scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
 "\">Preview %s</a>"
 msgstr ""
 
-#: admin/class-wpd-tinctures-post-type.php:157
+#: admin/class-wpd-tinctures-post-type.php:162
 msgid "M j, Y @ G:i"
 msgstr ""
 
-#: admin/class-wpd-tinctures-post-type.php:158
+#: admin/class-wpd-tinctures-post-type.php:163
 #, php-format
 msgid "%s draft updated. <a target=\"_blank\" href=\"%s\">Preview %s</a>"
 msgstr ""
@@ -319,7 +319,7 @@ msgid "Your most recent "
 msgstr ""
 
 #: admin/class-wpd-tinctures-widgets.php:208
-msgid "Widget Title:"
+msgid "Widget Title"
 msgstr ""
 
 #: admin/class-wpd-tinctures-widgets.php:213
@@ -340,10 +340,10 @@ msgid "Display featured image?"
 msgstr ""
 
 #: admin/class-wpd-tinctures-widgets.php:238
-msgid "Image size:"
+msgid "Image size"
 msgstr ""
 
-#: admin/wpd-tinctures-functions.php:101
+#: admin/wpd-tinctures-functions.php:100
 msgid "Tinctures"
 msgstr ""
 
