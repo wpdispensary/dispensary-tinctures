@@ -68,7 +68,7 @@ class WPD_Tinctures {
 	 */
 	public function __construct() {
 		$this->plugin_name = 'wpd-tinctures';
-		$this->version     = '2.0.2';
+		$this->version     = '2.0.3';
 
 		if ( defined( 'WPD_TINCTURES_VERSION' ) ) {
 			$this->version = WPD_TINCTURES_VERSION;

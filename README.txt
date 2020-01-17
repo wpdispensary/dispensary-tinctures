@@ -3,8 +3,8 @@ Contributors: wpdispensary, deviodigital
 Donate link: https://www.wpdispensary.com
 Tags: dispensary, cannabis, marijuana, CBD, tinctures, wp-dispensary
 Requires at least: 3.0.1
-Tested up to: 5.3
-Stable tag: 2.0.2
+Tested up to: 5.3.2
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,12 @@ Want to help this plugin get better? Head over to [Github](https://github.com/wp
 3. Activate the plugin and enjoy!
 
 == Changelog ==
+
+= 2.0.3 =
+*   Bugfix added missing arg to `get_wpd_product_details` REST API details in `admin/class-wpd-tinctures-rest-api.php`
+*   Updated image sizes to use WPD built-in helper function in `admin/class-wpd-tinctures-widgets.php`
+*   Updated `.pot` file with text strings for localization in `languages/wpd-tinctures.pot`
+*   General code cleanup throughout multiple files
 
 = 2.0.2 =
 *   Added minified version of admin CSS in `admin/css/wpd-tinctures-admin.min.css`
