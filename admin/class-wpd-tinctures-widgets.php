@@ -73,7 +73,7 @@ class wpd_tinctures_widget extends WP_Widget {
 		do_action( 'wpd_tinctures_widget_before' );
 
 		if ( ! 'on' == $instance['featuredimage'] ) {
-			echo "<ul class='wpdispensary-list'>";
+			echo '<ul class="wpdispensary-list">';
 		}
 
 		$randorder = '';
@@ -102,18 +102,18 @@ class wpd_tinctures_widget extends WP_Widget {
 
 			if ( 'on' === $instance['featuredimage'] ) {
 
-				echo "<div class='wpdispensary-widget'>";
+				echo '<div class="wpdispensary-widget">';
 
 				do_action( 'wpd_tinctures_widget_inside_top' );
 
 				wpd_product_image( $post->ID, $instance['imagesize'] );
 
 				if ( 'on' === $instance['tincturesname'] ) {
-					echo "<span class='wpdispensary-widget-title'><a href='" . esc_url( get_permalink( $post->ID ) ) . "'>" . get_the_title( $post->ID ) . "</a></span>";
+					echo '<span class="wpdispensary-widget-title"><a href="' . esc_url( get_permalink( $post->ID ) ) . '">' . get_the_title( $post->ID ) . '</a></span>';
 				}
 
 				if ( 'on' === $instance['tincturescategory'] ) {
-					echo "<span class='wpdispensary-widget-categories'>" . get_the_term_list( $post->ID, 'wpd_tinctures_category' ) . "</a></span>";
+					echo '<span class="wpdispensary-widget-categories">' . get_the_term_list( $post->ID, 'wpd_tinctures_category' ) . '</a></span>';
 				}
 
 				do_action( 'wpd_tinctures_widget_inside_bottom' );
@@ -205,12 +205,12 @@ class wpd_tinctures_widget extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, $defaults );
 	?>
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Widget Title:', 'wpd-tinctures' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Widget Title', 'wpd-tinctures' ); ?></label>
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_html( $instance['title'] ); ?>" />
 	</p>
 
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>"><?php esc_html_e( 'Amount of ' . $wpd_tinctures_slug . ' to show:', 'wpd-tinctures' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>"><?php esc_html_e( 'Amount of ' . $wpd_tinctures_slug . ' to show', 'wpd-tinctures' ); ?></label>
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'limit' ) ); ?>" type="number" name="<?php echo esc_attr( $this->get_field_name( 'limit' ) ); ?>" min="1" max="999" value="<?php echo esc_html( $instance['limit'] ); ?>" />
 	</p>
 
@@ -235,7 +235,7 @@ class wpd_tinctures_widget extends WP_Widget {
 	</p>
 
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'imagesize' ) ); ?>"><?php esc_html_e( 'Image size:', 'wpd-tinctures' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'imagesize' ) ); ?>"><?php esc_html_e( 'Image size', 'wpd-tinctures' ); ?></label>
 		<?php
 			$terms = apply_filters( 'wpd_widgets_featured_image_sizes', wpd_featured_image_sizes() );
 			if ( $terms ) {

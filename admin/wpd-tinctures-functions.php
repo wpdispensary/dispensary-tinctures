@@ -86,7 +86,7 @@ function wpd_tinctures_item_types() {
 	$product_id = get_the_ID();
 
 	// Display Tinctures Category.
-	echo "<span class='wpd-ecommerce category tinctures'>" . get_the_term_list( $product_id, 'wpd_tinctures_category', '', ' ' ) . "</span>";
+	echo '<span class="wpd-ecommerce category tinctures">' . get_the_term_list( $product_id, 'wpd_tinctures_category', '', ' ' ) . '</span>';
 }
 add_action( 'wpd_ecommerce_item_types_inside_after', 'wpd_tinctures_item_types' );
 
@@ -96,9 +96,8 @@ add_action( 'wpd_ecommerce_item_types_inside_after', 'wpd_tinctures_item_types' 
  * @since 1.7
  */
 function wpd_tinctures_menu_types( $menu_types ) {
-
 	// Add tinctures.
-	$menu_types['wpd-tinctures'] = __( 'Tinctures', 'wpd-tinctures' );
+	$menu_types['wpd-tinctures'] = esc_attr__( 'Tinctures', 'wpd-tinctures' );
 
 	return $menu_types;
 }
@@ -110,7 +109,6 @@ add_filter( 'wpd_menu_types', 'wpd_tinctures_menu_types' );
  * @since 1.7
  */
 function get_wpd_tinctures_prices_simple_filter( $str ) {
-
 	// Add tinctures prices.
 	if ( 'tinctures' == get_post_type( get_the_ID() ) ) {
 		$str .= get_wpd_tinctures_prices_simple( $id = NULL, $phrase = NULL );

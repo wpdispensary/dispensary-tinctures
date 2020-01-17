@@ -67,12 +67,12 @@ function wpd_tinctures_product_details( $data, $post, $request ) {
 		'cba'         => '',
 		'cbn'         => '',
 		'cbg'         => '',
-		'seed_count'  => 'show',
-		'clone_count' => 'show',
+		'seed_count'  => '',
+		'clone_count' => '',
 		'total_thc'   => 'show',
 		'size'        => 'show',
 		'servings'    => 'show',
-		'weight'      => 'show'
+		'weight'      => ''
 	);
 
 	$details = apply_filters( 'wpd_tinctures_product_details_all', $product_details );

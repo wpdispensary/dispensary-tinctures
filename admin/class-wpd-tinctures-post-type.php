@@ -97,6 +97,11 @@ add_action( 'init', 'wp_dispensary_tinctures', 0 );
 
 }
 
+/**
+ * Add WP Dispensary submenu item in the admin dashboard
+ * 
+ * @return void
+ */
 function wpd_tinctures_add_admin_menu() {
 	// Get permalink base for Tinctures.
 	$wpd_tinctures_slug = get_option( 'wpd_tinctures_slug' );
