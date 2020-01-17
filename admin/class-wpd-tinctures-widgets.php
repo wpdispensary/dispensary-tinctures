@@ -237,7 +237,7 @@ class wpd_tinctures_widget extends WP_Widget {
 	<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'imagesize' ) ); ?>"><?php esc_html_e( 'Image size:', 'wpd-tinctures' ); ?></label>
 		<?php
-			$terms = apply_filters( 'wpd_widgets_featured_image_sizes', array( 'wpdispensary-widget', 'dispensary-image', 'wpd-thumbnail', 'wpd-small', 'wpd-medium', 'wpd-large' ) );
+			$terms = apply_filters( 'wpd_widgets_featured_image_sizes', wpd_featured_image_sizes() );
 			if ( $terms ) {
 				printf( '<select name="%s" id="' . esc_html( $this->get_field_id( 'imagesize' ) ) . '" name="' . esc_html( $this->get_field_name( 'imagesize' ) ) . '" class="widefat">', esc_attr( $this->get_field_name( 'imagesize' ) ) );
 				foreach ( $terms as $term ) {
