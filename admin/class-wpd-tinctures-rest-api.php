@@ -78,7 +78,7 @@ function wpd_tinctures_product_details( $data, $post, $request ) {
 	$details = apply_filters( 'wpd_tinctures_product_details_all', $product_details );
 
 	$_data            = $data->data;
-	$_data['details'] = get_wpd_product_details( $post->ID, $details, NULL );
+	$_data['details'] = get_wpd_product_details( $post->ID, $details, 'span' );
 	$data->data       = $_data;
 	return $data;
 
