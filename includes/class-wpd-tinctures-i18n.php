@@ -22,7 +22,7 @@
  * @since      1.0.0
  * @package    WPD_Tinctures
  * @subpackage WPD_Tinctures/includes
- * @author     WP Dispensary <deviodigital@gmail.com>
+ * @author     WP Dispensary <contact@wpdispensary.com>
  */
 class WPD_Tinctures_i18n {
 

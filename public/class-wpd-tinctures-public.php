@@ -18,7 +18,7 @@
  *
  * @package    WPD_Tinctures
  * @subpackage WPD_Tinctures/public
- * @author     WP Dispensary <deviodigital@gmail.com>
+ * @author     WP Dispensary <contact@wpdispensary.com>
  */
 class WPD_Tinctures_Public {
 
