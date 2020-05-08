@@ -73,8 +73,10 @@ function wpd_tinctures_details_data() {
 		<?php if ( ! get_post_meta( get_the_ID(), '_netweight', true ) ) { } else { ?>
 			<tr><td><span><?php esc_attr_e( 'Net weight', 'wpd-tinctures' ); ?></span></td><td><?php echo get_post_meta( get_the_id(), '_netweight', true ); ?> oz</td></tr>
 		<?php } ?>
-		<?php if ( ! get_the_term_list( get_the_ID(), 'wpd_tinctures_category', true ) ) { } else { ?>
-			<tr><td><span><?php esc_attr_e( 'Categories', 'wpd-tinctures' ); ?></span></td><td><?php echo get_the_term_list( get_the_id(), 'wpd_tinctures_category', '', ', ' ); ?></td></tr>
+		<?php if ( ! is_plugin_active( 'wpd-ecommerce/wpd-ecommerce.php' ) ) { ?>
+			<?php if ( ! get_the_term_list( get_the_ID(), 'wpd_tinctures_category', true ) ) { } else { ?>
+				<tr><td><span><?php esc_attr_e( 'Categories', 'wpd-tinctures' ); ?></span></td><td><?php echo get_the_term_list( get_the_id(), 'wpd_tinctures_category', '', ', ' ); ?></td></tr>
+			<?php } ?>
 		<?php } ?>
 	<?php } // if in_array
 }
@@ -105,9 +107,11 @@ add_action( 'wpd_dataoutput_bottom', 'wpd_tinctures_allergens_data' );
 /** Tinctures Vendors Output */
 function wpd_tinctures_vendor_data() {
 	global $post;
-	if ( in_array( get_post_type(), array( 'tinctures' ) ) ) { ?>
-		<?php if ( ! get_the_term_list( get_the_ID(), 'vendor', true ) ) { } else { ?>
-		<tr><td><span><?php esc_attr_e( 'Vendors', 'wpd-tinctures' ); ?></span></td><td><?php echo get_the_term_list( $post->ID, 'vendor', '', ', ' ); ?></td></tr>
+	if ( in_array( get_post_type(), array( 'tinctures' ) ) ) {
+		if ( ! is_plugin_active( 'wpd-ecommerce/wpd-ecommerce.php' ) ) { ?>
+			<?php if ( ! get_the_term_list( get_the_ID(), 'vendor', true ) ) { } else { ?>
+			<tr><td><span><?php esc_attr_e( 'Vendors', 'wpd-tinctures' ); ?></span></td><td><?php echo get_the_term_list( $post->ID, 'vendor', '', ', ' ); ?></td></tr>
+			<?php } ?>
 		<?php } ?>
 	<?php }
 }
