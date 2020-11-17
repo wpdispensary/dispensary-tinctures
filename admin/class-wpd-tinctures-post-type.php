@@ -98,27 +98,6 @@ add_action( 'init', 'wp_dispensary_tinctures', 0 );
 }
 
 /**
- * Add WP Dispensary submenu item in the admin dashboard
- * 
- * @return void
- */
-function wpd_tinctures_add_admin_menu() {
-	// Get permalink base for Tinctures.
-	$wpd_tinctures_slug = get_option( 'wpd_tinctures_slug' );
-
-	// If custom base is empty, set default.
-	if ( '' == $wpd_tinctures_slug ) {
-		$wpd_tinctures_slug = 'tinctures';
-	}
-
-	// Capitalize first letter of new slug.
-	$wpd_tinctures_slug_cap = ucfirst( $wpd_tinctures_slug );
-
-	add_submenu_page( 'wpd-settings', 'WP Dispensary\'s ' . $wpd_tinctures_slug_cap, $wpd_tinctures_slug_cap, 'manage_options', 'edit.php?post_type=tinctures', NULL );
-}
-add_action( 'admin_menu', 'wpd_tinctures_add_admin_menu', 3 );
-
-/**
  * Function to add admin screen thumbnails to "Tinctures" menu type
  *
  * @since    1.2.0
